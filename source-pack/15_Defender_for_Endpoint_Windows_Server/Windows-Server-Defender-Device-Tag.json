@@ -1,0 +1,67 @@
+{
+ "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/deviceConfigurations(assignments())/$entity",
+ "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+ "@odata.id": "deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')",
+ "@odata.editLink": "deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration",
+ "id": "a2d85b8b-5ca4-4f18-84cc-81c32021040f",
+ "lastModifiedDateTime@odata.type": "#DateTimeOffset",
+ "lastModifiedDateTime": "2024-09-30T09:00:24.6984251Z",
+ "roleScopeTagIds@odata.type": "#Collection(String)",
+ "roleScopeTagIds": [
+  "0"
+ ],
+ "supportsScopeTags": true,
+ "deviceManagementApplicabilityRuleOsEdition": null,
+ "deviceManagementApplicabilityRuleOsVersion": null,
+ "deviceManagementApplicabilityRuleDeviceMode": null,
+ "createdDateTime@odata.type": "#DateTimeOffset",
+ "createdDateTime": "2024-09-30T09:00:24.6984251Z",
+ "displayName": "Baseline - MDE Device Tag",
+ "version": 1,
+ "omaSettings@odata.type": "#Collection(microsoft.graph.omaSetting)",
+ "omaSettings": [
+  {
+   "@odata.type": "#microsoft.graph.omaSettingString",
+   "displayName": "MDE Device Tag",
+   "description": null,
+   "omaUri": "./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group",
+   "secretReferenceValueId": null,
+   "isEncrypted": false,
+   "value": "Intune MWP"
+  }
+ ],
+ "assignments@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/assignments",
+ "assignments@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/assignments/$ref",
+ "assignments@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/assignments",
+ "assignments": [],
+ "deviceSettingStateSummaries@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceSettingStateSummaries/$ref",
+ "deviceSettingStateSummaries@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceSettingStateSummaries",
+ "deviceStatuses@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceStatuses/$ref",
+ "deviceStatuses@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceStatuses",
+ "deviceStatusOverview@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceStatusOverview/$ref",
+ "deviceStatusOverview@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/deviceStatusOverview",
+ "groupAssignments@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/groupAssignments/$ref",
+ "groupAssignments@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/groupAssignments",
+ "userStatuses@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/userStatuses/$ref",
+ "userStatuses@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/userStatuses",
+ "userStatusOverview@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/userStatusOverview/$ref",
+ "userStatusOverview@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.windows10CustomConfiguration/userStatusOverview",
+ "#microsoft.graph.assign": {
+  "title": "microsoft.graph.assign",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.deviceConfiguration/microsoft.graph.assign"
+ },
+ "#microsoft.graph.assignedAccessMultiModeProfiles": {
+  "title": "microsoft.graph.assignedAccessMultiModeProfiles",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.deviceConfiguration/microsoft.graph.assignedAccessMultiModeProfiles"
+ },
+ "#microsoft.graph.windowsPrivacyAccessControls": {
+  "title": "microsoft.graph.windowsPrivacyAccessControls",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.deviceConfiguration/microsoft.graph.windowsPrivacyAccessControls"
+ },
+ "#microsoft.graph.getOmaSettingPlainTextValue": {
+  "title": "microsoft.graph.getOmaSettingPlainTextValue",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/deviceConfigurations('a2d85b8b-5ca4-4f18-84cc-81c32021040f')/microsoft.graph.deviceConfiguration/microsoft.graph.getOmaSettingPlainTextValue"
+ },
+ "name": "Windows-Server-Defender-Device-Tag",
+ "description": "[Windows Server variant] Windows-Server-Defender-Device-Tag \u2014 see source: Baseline - MDE Device Tag.json"
+}

@@ -1,0 +1,89 @@
+{
+ "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies(assignments(),settings())/$entity",
+ "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicy",
+ "@odata.id": "deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')",
+ "@odata.editLink": "deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')",
+ "createdDateTime@odata.type": "#DateTimeOffset",
+ "createdDateTime": "2025-08-28T11:33:12.0394138Z",
+ "creationSource": null,
+ "lastModifiedDateTime@odata.type": "#DateTimeOffset",
+ "lastModifiedDateTime": "2025-08-28T11:33:12.0394138Z",
+ "name": "Windows-Server-Defender-Enable-File-Hash-Computation",
+ "platforms@odata.type": "#microsoft.graph.deviceManagementConfigurationPlatforms",
+ "platforms": "windows10",
+ "priorityMetaData": null,
+ "roleScopeTagIds@odata.type": "#Collection(String)",
+ "roleScopeTagIds": [
+  "0"
+ ],
+ "settingCount": 1,
+ "technologies@odata.type": "#microsoft.graph.deviceManagementConfigurationTechnologies",
+ "technologies": "mdm",
+ "id": "7b0fc266-0884-4c82-ad42-786393994b50",
+ "templateReference": {
+  "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicyTemplateReference",
+  "templateId": "",
+  "templateFamily@odata.type": "#microsoft.graph.deviceManagementConfigurationTemplateFamily",
+  "templateFamily": "none",
+  "templateDisplayName": null,
+  "templateDisplayVersion": null
+ },
+ "assignments@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/assignments",
+ "assignments@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/assignments/$ref",
+ "assignments@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/assignments",
+ "assignments": [],
+ "settings@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings",
+ "settings@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings/$ref",
+ "settings@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings",
+ "settings": [
+  {
+   "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+   "@odata.id": "deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings('0')",
+   "@odata.editLink": "deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings('0')",
+   "id": "0",
+   "settingInstance": {
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+    "settingDefinitionId": "device_vendor_msft_defender_configuration_enablefilehashcomputation",
+    "settingInstanceTemplateReference": null,
+    "choiceSettingValue": {
+     "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+     "settingValueTemplateReference": null,
+     "value": "device_vendor_msft_defender_configuration_enablefilehashcomputation_1",
+     "children@odata.type": "#Collection(microsoft.graph.deviceManagementConfigurationSettingInstance)",
+     "children": []
+    }
+   },
+   "settingDefinitions@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings('0')/settingDefinitions/$ref",
+   "settingDefinitions@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/settings('0')/settingDefinitions"
+  }
+ ],
+ "#microsoft.graph.assign": {
+  "title": "microsoft.graph.assign",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.assign"
+ },
+ "#microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.createCopy": {
+  "title": "microsoft.graph.createCopy",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.createCopy"
+ },
+ "#microsoft.graph.reorder": {
+  "title": "microsoft.graph.reorder",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.reorder"
+ },
+ "#microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.setEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.setEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.setEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy": {
+  "title": "microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('7b0fc266-0884-4c82-ad42-786393994b50')/microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy"
+ },
+ "description": "[Windows Server variant] Windows-Server-Defender-Enable-File-Hash-Computation \u2014 see source: CISv4 - WIN - L2 - Enable File Hash Computation.json"
+}

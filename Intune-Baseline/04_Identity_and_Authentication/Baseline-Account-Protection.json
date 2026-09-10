@@ -1,0 +1,102 @@
+{
+  "@odata.type": "#microsoft.graph.deviceManagementIntent",
+  "displayName": "Baseline - Account Protection",
+  "description": null,
+  "templateId": "0f2b5d70-d4e9-4156-8c16-1397eb6c54a5",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "settings": [
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_useSecurityKeyForSignin",
+      "valueJson": "true",
+      "value": true
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementStringSettingInstance",
+      "definitionId": "deviceConfiguration--windows10EndpointProtectionConfiguration_deviceGuardLocalSystemAuthorityCredentialGuardSettings",
+      "valueJson": "\"enableWithUEFILock\"",
+      "value": "enableWithUEFILock"
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_useCertificatesForOnPremisesAuthEnabled",
+      "valueJson": "false",
+      "value": false
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementIntegerSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinPreviousBlockCount",
+      "valueJson": "null",
+      "value": null
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_securityDeviceRequired",
+      "valueJson": "false",
+      "value": false
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementStringSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinSpecialCharactersUsage",
+      "valueJson": "\"notConfigured\"",
+      "value": "notConfigured"
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementIntegerSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinExpirationInDays",
+      "valueJson": "null",
+      "value": null
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementIntegerSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinMinimumLength",
+      "valueJson": "null",
+      "value": null
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementStringSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinLowercaseCharactersUsage",
+      "valueJson": "\"notConfigured\"",
+      "value": "notConfigured"
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_enhancedAntiSpoofingForFacialFeaturesEnabled",
+      "valueJson": "false",
+      "value": false
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinRecoveryEnabled",
+      "valueJson": "false",
+      "value": false
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_unlockWithBiometricsEnabled",
+      "valueJson": "false",
+      "value": false
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementIntegerSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinMaximumLength",
+      "valueJson": "null",
+      "value": null
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementStringSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_pinUppercaseCharactersUsage",
+      "valueJson": "\"notConfigured\"",
+      "value": "notConfigured"
+    },
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementBooleanSettingInstance",
+      "definitionId": "deviceConfiguration--windowsIdentityProtectionConfiguration_windowsHelloForBusinessBlocked",
+      "valueJson": "null",
+      "value": null
+    }
+  ]
+}

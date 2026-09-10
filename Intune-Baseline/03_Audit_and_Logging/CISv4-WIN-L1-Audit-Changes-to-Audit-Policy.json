@@ -1,0 +1,38 @@
+{
+  "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicy",
+  "description": "This subcategory reports changes in audit policy including SACL changes. Events for this subcategory include:\n\n• 4715: The audit policy (SACL) on an object was changed.\n• 4719: System audit policy was changed.\n• 4902: The Per-user audit policy table was created.\n• 4904: An attempt was made to register a security event source.\n• 4905: An attempt was made to unregister a security event source.\n• 4906: The CrashOnAuditFail value has changed.\n• 4907: Auditing settings on object were changed.\n• 4908: Special Groups Logon table modified.\n• 4912: Per User Audit Policy was changed.\n\nThe recommended state for this setting is to include: Success.\n",
+  "name": "CISv4 - WIN - L1 - Audit Changes to Audit Policy",
+  "platforms@odata.type": "#microsoft.graph.deviceManagementConfigurationPlatforms",
+  "platforms": "windows10",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "technologies@odata.type": "#microsoft.graph.deviceManagementConfigurationTechnologies",
+  "technologies": "mdm",
+  "templateReference": {
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicyTemplateReference",
+    "templateId": "",
+    "templateFamily@odata.type": "#microsoft.graph.deviceManagementConfigurationTemplateFamily",
+    "templateFamily": "none",
+    "templateDisplayName": null,
+    "templateDisplayVersion": null
+  },
+  "settings": [
+    {
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+      "settingInstance": {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "settingDefinitionId": "device_vendor_msft_policy_config_audit_policychange_auditpolicychange",
+        "settingInstanceTemplateReference": null,
+        "choiceSettingValue": {
+          "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+          "settingValueTemplateReference": null,
+          "value": "device_vendor_msft_policy_config_audit_policychange_auditpolicychange_1",
+          "children@odata.type": "#Collection(microsoft.graph.deviceManagementConfigurationSettingInstance)",
+          "children": []
+        }
+      }
+    }
+  ]
+}

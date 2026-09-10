@@ -1,0 +1,25 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "description": null,
+  "displayName": "Baseline - Enables FIDO Security Keys to be used during Windows Sign In -1",
+  "omaSettings@odata.type": "#Collection(microsoft.graph.omaSetting)",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingInteger",
+      "displayName": "Turn on FIDO Security Keys for Windows Sign-In",
+      "description": null,
+      "omaUri": "./Device/Vendor/MSFT/PassportForWork/SecurityKey/UseSecurityKeyForSignin",
+      "secretReferenceValueId": null,
+      "isEncrypted": false,
+      "value": 1,
+      "isReadOnly": false
+    }
+  ]
+}

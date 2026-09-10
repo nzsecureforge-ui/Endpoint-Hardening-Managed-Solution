@@ -1,0 +1,576 @@
+﻿framework,control,policy_file,category,control_domain,cis_level,platform,mapping_status
+ISO/IEC 27001:2022,(no workbook row),Baseline - Device Control,08_Removable_Media_and_Device_Control,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Linux - Device Encryption,06_Data_Encryption,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - MDE Device Tag,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Smartscreen Enhanced Phishing Protection Block Mode,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Teams - Restrict sign in to Teams to accounts in specific tenants,05_Tenant_and_Account_Access_Control,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - WHFB Muti-Factor unlock Template config,12_Passwordless_Authentication,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Windows - Firewall,07_Firewall_and_Network_Security,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Windows AI - Settings Agent,10_Privacy_and_AI_Data_Governance,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Baseline - Windows health monitoring,14_Modern_Workplace_and_Resilience,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv3 - EDGE - L1 - Allow Basic authentication for HTTP,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv3 - EDGE - L1 - Allow importing of saved passwords,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv3 - EDGE - L1 - Enable Microsoft Defender SmartScreen DNS requests,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),"CISv4 - WIN - L1 - ASR Block executable files from running  unless they meet a prevalence, age, or trusted list criterion'",01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - ASR Block execution of potentially obfuscated  scripts,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Allow Basic authentication WinRM Client,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Allow Indexing Encrypted Stores Or Items,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Audit Special Logon,03_Audit_and_Logging,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Credential Guard,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - MSS (AutoAdminLogon) Enable Automatic  Logon (not recommended),02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Manage preview builds,09_Patch_Management,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Microsoft network server Digitally sign  communications (always),02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Scheduled Install Day,09_Patch_Management,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),CISv4 - WIN - L1 - Turn off Autoplay,08_Removable_Media_and_Device_Control,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(no workbook row),Windows-Server-ASR-Block-Credential-Stealing-LSASS,15_Defender_for_Endpoint_Windows_Server,,,,UNMAPPED — no workbook row
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Clear browsing data when Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Clear cached images and files when Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Clear history for IE and IE mode every time you exit,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Configure InPrivate mode availability,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Configure the list of types that are excluded from synchronization,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Enable globally scoped HTTP auth cache,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - In-app support Enabled,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L1 - Suggest similar pages when a webpage can#U2019t be found,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Allow file selection dialogs,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Configure Speech Recognition,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Default sensors setting,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Default setting for third-party storage  partitioning,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Enforce Bing SafeSearch,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Enforce Google SafeSearch,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,(none recorded),CISv3 - EDGE - L2 - Spell checking provided by Microsoft Editor,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,5.15,Baseline - One Drive management settings,05_Tenant_and_Account_Access_Control,Identity & Account Control,L2,Windows 11,mapped
+ISO/IEC 27001:2022,5.16,Baseline - Block add MSA accounts and non-MSA accounts,05_Tenant_and_Account_Access_Control,Identity & Account Control,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.16,CISv3 - EDGE - L2 - Browser sign-in settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+ISO/IEC 27001:2022,5.16,CISv4 - WIN - L1 - Accounts Enable Guest account status,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.16,CISv4 - WIN - L1 - Accounts Rename administrator account,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.16,sysext,16_Defender_for_Endpoint_macOS,Identity & Account Control,N/A,macOS,mapped
+ISO/IEC 27001:2022,5.17,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.17,CISv4 - WIN - L1 - Accounts Limit local account use of blank  passwords to console logon only',02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.17,CISv4 - WIN - L1 - Network security Do not store LAN Manager  hash value on next password change,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,5.17,CISv4 - WIN - L1 - Prevent the use of security questions for  local accounts,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv3 - EDGE - L1 - Enable profile creation from the Identity flyout menu or the Settings page,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L1,Edge,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L1 - Configure Lsa Protected Process is set to  'Enabled with UEFI Lock,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L1 - Interactive logon Machine inactivity limit,02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L1 - Interactive logon Smart card removal  behavior,02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L1 - Require a password when a computer  wakes (plugged in),02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L2 - Set time limit for active but idle  Remote Desktop Services sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.1,CISv4 - WIN - L2 - Set time limit for disconnected  sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.13,Baseline - Cloud Remediation  quick machine recovery,14_Modern_Workplace_and_Resilience,Resilience & Recovery,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.13,Baseline - Enable Windows Backup_2025-09-01T08_19_23.564Z,14_Modern_Workplace_and_Resilience,Resilience & Recovery,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Account Logon Audit Credential Validation,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Account Logon Logoff Audit Account Lockout,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Account Logon Logoff Audit Logon,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Audit Changes to Audit Policy,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Audit User Account Management,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Object Access Audit Removable Storage,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Privilege Use Audit Sensitive Privilege Use,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L1 - Specify the maximum log file size (KB) Security,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L2 - Turn on PowerShell Script Block Logging,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.15,CISv4 - WIN - L2 - Turn on PowerShell Transcription,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.19,CISv3 - EDGE - L2 - Configure extension management settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+ISO/IEC 27001:2022,8.2,Baseline - Account Protection,04_Identity_and_Authentication,UAC & Privileged Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - 'User Account Control Behavior of the  elevation prompt for standard users,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - Accounts Enable Guest account status,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - Accounts Rename administrator account,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - Apply UAC restrictions to local accounts on  network logons,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - User Account Control Behavior of the  elevation prompt for administrators,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,CISv4 - WIN - L1 - User Account Control Run all administrators  in Admin Approval Mode,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.2,background_services,16_Defender_for_Endpoint_macOS,UAC & Privileged Access,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Allow Google Cast to connect to Cast devices on all IP addresses,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Allow queries to a Browser Network Time service,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Configure the list of names that will bypass the HSTS policy check,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Control use of insecure content exceptions,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - DNS interception checks enabled,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Enable Google Cast,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Enable warnings for insecure forms,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L1 - Manage exposure of local IP addresses by WebRTC,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L2 - Allow users to proceed from the HTTPS  warning page,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L2 - Block third party cookies,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L2 - Control where security restrictions on insecure  origins apply,11_Microsoft_Edge_CIS_Benchmark,Network Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv3 - EDGE - L2 - Enhanced Security Mode configuration for  Intranet zone sites,11_Microsoft_Edge_CIS_Benchmark,Network Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Configure SMB v1 client driver,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Configure SMB v1 server,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Microsoft network client Digitally sign  communications (always),02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Network security LAN Manager authentication  level,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Require secure RPC communication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Require user authentication for remote  connections by using Network Level Authentication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,CISv4 - WIN - L1 - Set client connection encryption level,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.20,firewall,16_Defender_for_Endpoint_macOS,Firewall,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.20,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.23,CISv3 - EDGE - L1 - Configure Microsoft Defender SmartScreen,01_Defender_for_Endpoint (Windows + Linux),Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.24,Baseline - Bitlocker Policy,06_Data_Encryption,Encryption at Rest,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.24,Baseline - Personal Data Encryption,06_Data_Encryption,Encryption at Rest,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.24,Baseline - SSL Cipher Suite Order,07_Firewall_and_Network_Security,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.24,CISv3 - EDGE - L1 - Allow importing of payment info,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.24,CISv3 - EDGE - L1 - Enable AutoFill for payment instructions,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.24,CISv3 - EDGE - L2 - Specify if online OCSPCRL checks are  required for local trust anchors,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.24,CISv4 - Choose how BitLocker-protected  operating system drives can be recovered  Require 48-digit recovery password,06_Data_Encryption,Encryption at Rest,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.3,Baseline - One Drive management settings,05_Tenant_and_Account_Access_Control,Identity & Account Control,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.3,sysext,16_Defender_for_Endpoint_macOS,Identity & Account Control,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.5,Baseline -  WHFB Exclude Security Devices TPM 1.2 ,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,Baseline - Block add MSA accounts and non-MSA accounts,05_Tenant_and_Account_Access_Control,Identity & Account Control,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,Baseline - Chrome Password manager and protection configuration,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+ISO/IEC 27001:2022,8.5,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,Baseline - Enables FIDO Security Keys to be used during Windows Sign In -1,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,Baseline - WHFB Disable Post Logon Provisioning,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,Baseline - WHFB Require Security Device,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L1 - Allow cross-origin HTTP Authentication prompts,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L1 - Allow import of data from other browsers on each Microsoft Edge launch,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L1 - Allow importing of autofill form data,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L1 - Enable saving passwords to the password manager,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L2 - Browser sign-in settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L2 - Enable guest mode,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv3 - EDGE - L2 - Supported authentication schemes,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L2,Edge,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Accounts Limit local account use of blank  passwords to console logon only',02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Always prompt for password upon connection,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Network security Do not store LAN Manager  hash value on next password change,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Network security LAN Manager authentication  level,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Prevent the use of security questions for  local accounts,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - Require user authentication for remote  connections by using Network Level Authentication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L1 - WDigest Authentication,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,CISv4 - WIN - L2 - Support device authentication using  certificate,04_Identity_and_Authentication,Authentication & Account Security,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.5,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.7,ASR - BLOCK - Block Office applications from creating executable content,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,ASR - BLOCK - Block abuse of exploited vulnerable signed drivers (Device),01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,ASR - BLOCK - Block rebooting machine in Safe Mode,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,ASR - BLOCK - Enable Controlled Folder Access,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,ASR - BLOCK - Use advanced protection against ransomware,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,Baseline - App and Browser Isolation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Chrome - Block external extensions from being installed,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Chrome - Configure extension installation allow list,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Chrome - Enable Site Isolation for specified origins,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Chrome Microsoft Defender Browser Protection,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Chrome,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Defender for Endpoint Linux ,01_Defender_for_Endpoint (Windows + Linux),Linux Endpoint Security,L1,Linux,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Microsoft Defender Antivirus,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Scareware Blocker in Microsoft Edge,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,Baseline - Windows Defender  Security Experience,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Allow download restrictions,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Allow remote debugging,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Allow the audio sandbox to run,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Configure Edge Website Typo Protection,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Configure Microsoft Defender SmartScreen,01_Defender_for_Endpoint (Windows + Linux),Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Enable browser legacy extension point blocking,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Enable security warnings for command-line flags,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L1 - Prevent bypassing Microsoft Defender SmartScreen prompts for sites,01_Defender_for_Endpoint (Windows + Linux),Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Allow or block audio capture,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Allow or deny screen capture,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Allow unconfigured sites to be reloaded in  Internet Explorer mode,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - AutoLaunch Protocols Component Enabled,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Control use of JavaScript JIT,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Control use of the Headless Mode,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv3 - EDGE - L2 - Show an Always open checkbox in external  protocol dialog,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block Adobe Reader from creating child  processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block JavaScript or VBScript from  launching downloaded executable content,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block Office communication application  from creating child processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block Win32 API calls from Office  macros,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block all Office applications from creating  child processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block credential stealing from the  Windows local security authority subsystem,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block executable content from email  client and webmail,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block persistence through WMI event  subscription,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block process creations originating from  PSExec and WMI commands,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L1 - ASR Block untrusted and unsigned processes  that run from USB,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,CISv4 - WIN - L2 - Enable File Hash Computation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Adobe-Reader-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Advanced-Ransomware-Protection,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Email-Client-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Executable-Files-Prevalence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Exploited-Signed-Drivers,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-JS-VBScript-Downloaded-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Obfuscated-Scripts,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Office-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Office-Communication-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Office-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-PSExec-WMI-Process-Creation,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Safe-Mode-Reboot,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Untrusted-USB-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-WMI-Persistence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Block-Webshell-Creation-Exchange,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),N/A,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-ASR-Enable-Controlled-Folder-Access,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-Defender-Antivirus,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-Defender-Device-Tag,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-Defender-Enable-File-Hash-Computation,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L2,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-Defender-Security-Experience,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,Windows-Server-Defender-Update-Controls,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.7,bluetooth,16_Defender_for_Endpoint_macOS,Removable Media & USB,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.7,com.microsoft.wdav,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.7,fulldisk,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.7,notif,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.8,Baseline - Defender for Endpoint Linux ,01_Defender_for_Endpoint (Windows + Linux),Linux Endpoint Security,L1,Linux,mapped
+ISO/IEC 27001:2022,8.8,Baseline - Microsoft Defender Antivirus,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.8,Baseline - Microsoft Defender Update controls,01_Defender_for_Endpoint (Windows + Linux),Patch Management,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.8,CISv3 - EDGE - L1 - Enable component updates in Microsoft Edge,11_Microsoft_Edge_CIS_Benchmark,Patch Management,L1,Edge,mapped
+ISO/IEC 27001:2022,8.8,CISv3 - EDGE - L1 - Update policy override default,11_Microsoft_Edge_CIS_Benchmark,Patch Management,L1,Edge,mapped
+ISO/IEC 27001:2022,8.8,CISv4 - WIN - L1 - Allow Auto Update,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.8,CISv4 - WIN - L1 - Defer Feature Updates Period in Days,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.8,CISv4 - WIN - L1 - Pause Updates,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.8,Windows-Server-Defender-Antivirus,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.8,Windows-Server-Defender-Device-Tag,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.8,Windows-Server-Defender-Enable-File-Hash-Computation,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L2,Windows Server,mapped
+ISO/IEC 27001:2022,8.8,Windows-Server-Defender-Security-Experience,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.8,Windows-Server-Defender-Update-Controls,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+ISO/IEC 27001:2022,8.8,com.microsoft.autoupdate2,16_Defender_for_Endpoint_macOS,Patch Management,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.8,com.microsoft.wdav,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.8,fulldisk,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.8,notif,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Configure Windows protected print,14_Modern_Workplace_and_Resilience,Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Disable Xbox services,10_Privacy_and_AI_Data_Governance,Attack Surface Reduction (ASR),L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Google Chrome Management,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L2,Chrome,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows AI -  Turn Off Copilot in Windows (User),10_Privacy_and_AI_Data_Governance,AI & Data Governance,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows AI - Block Microsoft Recall,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows AI - Copilot access to Microsoft Edge page content for Entra account,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows AI - Disable Click To Do,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows AI - Enable Edge GenAI local foundational model  ,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows Defender  Security Experience,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,Baseline - Windows Subsystem For Linux,14_Modern_Workplace_and_Resilience,Linux Endpoint Security,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Allow importing of browser settings,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Allow websites to query for available payment methods,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Blocks external extensions from being installed,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Compose is enabled for writing on the web,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Configure users ability to override feature flags,11_Microsoft_Edge_CIS_Benchmark,UAC & Privileged Access,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Continue running background apps after Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Control communication with the Experimentation and Configuration Service,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Disable synchronization of data using Microsoft sync services,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Edge 3P SERP Telemetry Enabled,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Enable CryptoWallet feature,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Enable Discover access to page contents for AAD profiles,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L1 - Show Microsoft Rewards experiences,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Allow read access via the File System API on  these sites,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Allow users to open files using the ClickOnce  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Allow users to open files using the DirectInvoke  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Configure extension management settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Control use of the File System API for reading,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Control use of the Serial API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Control use of the Web Bluetooth API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv3 - EDGE - L2 - Control use of the WebHID API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+ISO/IEC 27001:2022,8.9,CISv4 - WIN - L1 - Configure SMB v1 client driver,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,CISv4 - WIN - L1 - Configure SMB v1 server,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,CISv4 - WIN - L1 - Disallow Autoplay for non-volume devices,08_Removable_Media_and_Device_Control,Removable Media & USB,L1,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,CISv4 - WIN - L2 - Disable Advertising ID,10_Privacy_and_AI_Data_Governance,Privacy & Data Governance,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,CISv4 - WIN - L2 - Upload User Activities,10_Privacy_and_AI_Data_Governance,Privacy & Data Governance,L2,Windows 11,mapped
+ISO/IEC 27001:2022,8.9,accessibility,16_Defender_for_Endpoint_macOS,Privacy & Data Governance,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.9,bluetooth,16_Defender_for_Endpoint_macOS,Removable Media & USB,N/A,macOS,mapped
+ISO/IEC 27001:2022,8.9,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Device Control,08_Removable_Media_and_Device_Control,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Linux - Device Encryption,06_Data_Encryption,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - MDE Device Tag,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Smartscreen Enhanced Phishing Protection Block Mode,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Teams - Restrict sign in to Teams to accounts in specific tenants,05_Tenant_and_Account_Access_Control,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - WHFB Muti-Factor unlock Template config,12_Passwordless_Authentication,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Windows - Firewall,07_Firewall_and_Network_Security,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Windows AI - Settings Agent,10_Privacy_and_AI_Data_Governance,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Baseline - Windows health monitoring,14_Modern_Workplace_and_Resilience,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv3 - EDGE - L1 - Allow Basic authentication for HTTP,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv3 - EDGE - L1 - Allow importing of saved passwords,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv3 - EDGE - L1 - Enable Microsoft Defender SmartScreen DNS requests,11_Microsoft_Edge_CIS_Benchmark,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),"CISv4 - WIN - L1 - ASR Block executable files from running  unless they meet a prevalence, age, or trusted list criterion'",01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - ASR Block execution of potentially obfuscated  scripts,01_Defender_for_Endpoint (Windows + Linux),,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Allow Basic authentication WinRM Client,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Allow Indexing Encrypted Stores Or Items,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Audit Special Logon,03_Audit_and_Logging,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Credential Guard,02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - MSS (AutoAdminLogon) Enable Automatic  Logon (not recommended),02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Manage preview builds,09_Patch_Management,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Microsoft network server Digitally sign  communications (always),02_Windows_CIS_Benchmark_Hardening,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Scheduled Install Day,09_Patch_Management,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),CISv4 - WIN - L1 - Turn off Autoplay,08_Removable_Media_and_Device_Control,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(no workbook row),Windows-Server-ASR-Block-Credential-Stealing-LSASS,15_Defender_for_Endpoint_Windows_Server,,,,UNMAPPED — no workbook row
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Clear browsing data when Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Clear cached images and files when Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Clear history for IE and IE mode every time you exit,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Configure InPrivate mode availability,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Configure the list of types that are excluded from synchronization,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Enable globally scoped HTTP auth cache,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - In-app support Enabled,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L1 - Suggest similar pages when a webpage can#U2019t be found,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Allow file selection dialogs,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Configure Speech Recognition,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Default sensors setting,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Default setting for third-party storage  partitioning,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Enforce Bing SafeSearch,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Enforce Google SafeSearch,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,(none recorded),CISv3 - EDGE - L2 - Spell checking provided by Microsoft Editor,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,AC-11,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-11,CISv4 - WIN - L1 - Interactive logon Machine inactivity limit,02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-11,CISv4 - WIN - L1 - Interactive logon Smart card removal  behavior,02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-11,CISv4 - WIN - L1 - Require a password when a computer  wakes (plugged in),02_Windows_CIS_Benchmark_Hardening,Screen Lock & Session,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-11,CISv4 - WIN - L2 - Set time limit for active but idle  Remote Desktop Services sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-11,CISv4 - WIN - L2 - Set time limit for disconnected  sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-17,CISv4 - WIN - L1 - Always prompt for password upon connection,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-17,CISv4 - WIN - L1 - Require user authentication for remote  connections by using Network Level Authentication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-17,CISv4 - WIN - L1 - Set client connection encryption level,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-17,CISv4 - WIN - L2 - Set time limit for active but idle  Remote Desktop Services sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-17,CISv4 - WIN - L2 - Set time limit for disconnected  sessions,02_Windows_CIS_Benchmark_Hardening,Remote Access,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-2,Baseline - Block add MSA accounts and non-MSA accounts,05_Tenant_and_Account_Access_Control,Identity & Account Control,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-2,Baseline - One Drive management settings,05_Tenant_and_Account_Access_Control,Identity & Account Control,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-2,CISv3 - EDGE - L2 - Browser sign-in settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+NIST SP 800-53 Rev 5,AC-2,CISv4 - WIN - L1 - Accounts Enable Guest account status,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-2,CISv4 - WIN - L1 - Accounts Rename administrator account,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-2,sysext,16_Defender_for_Endpoint_macOS,Identity & Account Control,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,AC-3,Baseline - One Drive management settings,05_Tenant_and_Account_Access_Control,Identity & Account Control,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-3,CISv4 - WIN - L1 - Apply UAC restrictions to local accounts on  network logons,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-3,background_services,16_Defender_for_Endpoint_macOS,UAC & Privileged Access,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,AC-3,sysext,16_Defender_for_Endpoint_macOS,Identity & Account Control,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,AC-4,Baseline - Windows AI - Copilot access to Microsoft Edge page content for Entra account,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,AC-4,CISv3 - EDGE - L1 - Enable Discover access to page contents for AAD profiles,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,AC-4,CISv3 - EDGE - L1 - Enable profile creation from the Identity flyout menu or the Settings page,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L1,Edge,mapped
+NIST SP 800-53 Rev 5,AC-6,Baseline - Account Protection,04_Identity_and_Authentication,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,CISv4 - WIN - L1 - 'User Account Control Behavior of the  elevation prompt for standard users,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,CISv4 - WIN - L1 - Accounts Rename administrator account,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,CISv4 - WIN - L1 - Apply UAC restrictions to local accounts on  network logons,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,CISv4 - WIN - L1 - User Account Control Behavior of the  elevation prompt for administrators,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,CISv4 - WIN - L1 - User Account Control Run all administrators  in Admin Approval Mode,02_Windows_CIS_Benchmark_Hardening,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AC-6,background_services,16_Defender_for_Endpoint_macOS,UAC & Privileged Access,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,AC-7,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-11,CISv4 - WIN - L1 - Specify the maximum log file size (KB) Security,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Account Logon Audit Credential Validation,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Account Logon Logoff Audit Account Lockout,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Account Logon Logoff Audit Logon,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Audit User Account Management,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Object Access Audit Removable Storage,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L1 - Privilege Use Audit Sensitive Privilege Use,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L2 - Turn on PowerShell Script Block Logging,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-12,CISv4 - WIN - L2 - Turn on PowerShell Transcription,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Account Logon Audit Credential Validation,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Account Logon Logoff Audit Account Lockout,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Account Logon Logoff Audit Logon,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Audit Changes to Audit Policy,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Audit User Account Management,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Object Access Audit Removable Storage,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L1 - Privilege Use Audit Sensitive Privilege Use,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L2 - Turn on PowerShell Script Block Logging,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-2,CISv4 - WIN - L2 - Turn on PowerShell Transcription,03_Audit_and_Logging,Audit & Logging,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,AU-9,CISv4 - WIN - L1 - Audit Changes to Audit Policy,03_Audit_and_Logging,Audit & Logging,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-11,Baseline - Chrome - Block external extensions from being installed,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+NIST SP 800-53 Rev 5,CM-11,Baseline - Chrome - Configure extension installation allow list,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+NIST SP 800-53 Rev 5,CM-11,CISv3 - EDGE - L1 - Blocks external extensions from being installed,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-11,CISv3 - EDGE - L2 - Allow users to open files using the ClickOnce  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-11,CISv3 - EDGE - L2 - Allow users to open files using the DirectInvoke  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-11,CISv3 - EDGE - L2 - Configure extension management settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-6,Baseline - Microsoft Defender Update controls,01_Defender_for_Endpoint (Windows + Linux),Patch Management,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-6,CISv3 - EDGE - L1 - Update policy override default,11_Microsoft_Edge_CIS_Benchmark,Patch Management,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-6,com.microsoft.autoupdate2,16_Defender_for_Endpoint_macOS,Patch Management,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Configure Windows protected print,14_Modern_Workplace_and_Resilience,Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Disable Xbox services,10_Privacy_and_AI_Data_Governance,Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Google Chrome Management,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L2,Chrome,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows AI -  Turn Off Copilot in Windows (User),10_Privacy_and_AI_Data_Governance,AI & Data Governance,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows AI - Block Microsoft Recall,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows AI - Copilot access to Microsoft Edge page content for Entra account,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows AI - Disable Click To Do,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows AI - Enable Edge GenAI local foundational model  ,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows Defender  Security Experience,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,Baseline - Windows Subsystem For Linux,14_Modern_Workplace_and_Resilience,Linux Endpoint Security,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Allow importing of browser settings,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Allow websites to query for available payment methods,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Blocks external extensions from being installed,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Compose is enabled for writing on the web,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Configure users ability to override feature flags,11_Microsoft_Edge_CIS_Benchmark,UAC & Privileged Access,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Continue running background apps after Microsoft Edge closes,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Control communication with the Experimentation and Configuration Service,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Disable Bing chat entry-points on Microsoft Edge Enterprise new tab page,11_Microsoft_Edge_CIS_Benchmark,AI & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Disable synchronization of data using Microsoft sync services,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Edge 3P SERP Telemetry Enabled,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Enable CryptoWallet feature,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L1 - Show Microsoft Rewards experiences,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L1,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Allow read access via the File System API on  these sites,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Allow users to open files using the ClickOnce  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Allow users to open files using the DirectInvoke  protocol,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Configure extension management settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Control use of the File System API for reading,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Control use of the Serial API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Control use of the Web Bluetooth API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Control use of the WebHID API,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv3 - EDGE - L2 - Enable guest mode,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv4 - WIN - L1 - Configure SMB v1 client driver,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv4 - WIN - L1 - Configure SMB v1 server,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv4 - WIN - L1 - Disallow Autoplay for non-volume devices,08_Removable_Media_and_Device_Control,Removable Media & USB,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv4 - WIN - L2 - Disable Advertising ID,10_Privacy_and_AI_Data_Governance,Privacy & Data Governance,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,CISv4 - WIN - L2 - Upload User Activities,10_Privacy_and_AI_Data_Governance,Privacy & Data Governance,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CM-7,accessibility,16_Defender_for_Endpoint_macOS,Privacy & Data Governance,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,CM-7,bluetooth,16_Defender_for_Endpoint_macOS,Removable Media & USB,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,CM-7,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,CP-10,Baseline - Cloud Remediation  quick machine recovery,14_Modern_Workplace_and_Resilience,Resilience & Recovery,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CP-9,Baseline - Cloud Remediation  quick machine recovery,14_Modern_Workplace_and_Resilience,Resilience & Recovery,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,CP-9,Baseline - Enable Windows Backup_2025-09-01T08_19_23.564Z,14_Modern_Workplace_and_Resilience,Resilience & Recovery,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,Baseline -  WHFB Exclude Security Devices TPM 1.2 ,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,Baseline - Account Protection,04_Identity_and_Authentication,UAC & Privileged Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,Baseline - Enables FIDO Security Keys to be used during Windows Sign In -1,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,Baseline - WHFB Disable Post Logon Provisioning,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,Baseline - WHFB Require Security Device,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,CISv3 - EDGE - L2 - Browser sign-in settings,11_Microsoft_Edge_CIS_Benchmark,Identity & Account Control,L2,Edge,mapped
+NIST SP 800-53 Rev 5,IA-2,CISv3 - EDGE - L2 - Enable guest mode,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,IA-2,CISv4 - WIN - L1 - Always prompt for password upon connection,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,CISv4 - WIN - L1 - Require user authentication for remote  connections by using Network Level Authentication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-2,background_services,16_Defender_for_Endpoint_macOS,UAC & Privileged Access,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,IA-3,CISv4 - WIN - L1 - Network security LAN Manager authentication  level,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-3,CISv4 - WIN - L2 - Support device authentication using  certificate,04_Identity_and_Authentication,Authentication & Account Security,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-3,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,IA-5,Baseline - Chrome Password manager and protection configuration,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+NIST SP 800-53 Rev 5,IA-5,Baseline - Device Password Policy (Consolidated),02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,Baseline - Enables FIDO Security Keys to be used during Windows Sign In -1,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,Baseline - WHFB Require Security Device,12_Passwordless_Authentication,Passwordless Authentication,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv3 - EDGE - L1 - Allow cross-origin HTTP Authentication prompts,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv3 - EDGE - L1 - Allow import of data from other browsers on each Microsoft Edge launch,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv3 - EDGE - L1 - Allow importing of autofill form data,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv3 - EDGE - L1 - Enable saving passwords to the password manager,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv3 - EDGE - L2 - Supported authentication schemes,11_Microsoft_Edge_CIS_Benchmark,Credential Protection,L2,Edge,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv4 - WIN - L1 - Accounts Limit local account use of blank  passwords to console logon only',02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv4 - WIN - L1 - Network security Do not store LAN Manager  hash value on next password change,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv4 - WIN - L1 - Prevent the use of security questions for  local accounts,02_Windows_CIS_Benchmark_Hardening,Authentication & Account Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-5,CISv4 - WIN - L1 - WDigest Authentication,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-8,Baseline - Block add MSA accounts and non-MSA accounts,05_Tenant_and_Account_Access_Control,Identity & Account Control,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,IA-8,sysext,16_Defender_for_Endpoint_macOS,Identity & Account Control,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,MP-5,Baseline - Bitlocker Policy,06_Data_Encryption,Encryption at Rest,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,MP-5,Baseline - Personal Data Encryption,06_Data_Encryption,Encryption at Rest,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,MP-5,CISv3 - EDGE - L1 - Allow importing of payment info,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,MP-5,CISv3 - EDGE - L1 - Enable AutoFill for payment instructions,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,MP-7,CISv4 - WIN - L1 - ASR Block untrusted and unsigned processes  that run from USB,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,MP-7,CISv4 - WIN - L1 - Disallow Autoplay for non-volume devices,08_Removable_Media_and_Device_Control,Removable Media & USB,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,MP-7,bluetooth,16_Defender_for_Endpoint_macOS,Removable Media & USB,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SC-13,Baseline - SSL Cipher Suite Order,07_Firewall_and_Network_Security,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-28,Baseline - Bitlocker Policy,06_Data_Encryption,Encryption at Rest,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-28,Baseline - Personal Data Encryption,06_Data_Encryption,Encryption at Rest,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-28,CISv3 - EDGE - L1 - Allow importing of payment info,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-28,CISv3 - EDGE - L1 - Enable AutoFill for payment instructions,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-28,CISv4 - Choose how BitLocker-protected  operating system drives can be recovered  Require 48-digit recovery password,06_Data_Encryption,Encryption at Rest,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-28,CISv4 - WIN - L1 - WDigest Authentication,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-3,Baseline - App and Browser Isolation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-3,CISv3 - EDGE - L1 - Allow the audio sandbox to run,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-3,CISv3 - EDGE - L2 - Allow or block audio capture,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-3,CISv3 - EDGE - L2 - Allow or deny screen capture,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-3,CISv4 - WIN - L1 - Configure Lsa Protected Process is set to  'Enabled with UEFI Lock,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-7,Baseline - Chrome - Enable Site Isolation for specified origins,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+NIST SP 800-53 Rev 5,SC-7,CISv3 - EDGE - L1 - Allow Google Cast to connect to Cast devices on all IP addresses,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-7,CISv3 - EDGE - L1 - Allow queries to a Browser Network Time service,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-7,CISv3 - EDGE - L1 - DNS interception checks enabled,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-7,CISv3 - EDGE - L1 - Enable Google Cast,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-7,CISv3 - EDGE - L1 - Manage exposure of local IP addresses by WebRTC,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-7,firewall,16_Defender_for_Endpoint_macOS,Firewall,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SC-8,Baseline - Chrome Microsoft Defender Browser Protection,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Chrome,mapped
+NIST SP 800-53 Rev 5,SC-8,Baseline - SSL Cipher Suite Order,07_Firewall_and_Network_Security,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L1 - Allow cross-origin HTTP Authentication prompts,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L1 - Configure the list of names that will bypass the HSTS policy check,11_Microsoft_Edge_CIS_Benchmark,Network Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L1 - Control use of insecure content exceptions,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L1 - DNS interception checks enabled,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L1 - Enable warnings for insecure forms,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L2 - Allow users to proceed from the HTTPS  warning page,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L2 - Block third party cookies,11_Microsoft_Edge_CIS_Benchmark,Privacy & Data Governance,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L2 - Control where security restrictions on insecure  origins apply,11_Microsoft_Edge_CIS_Benchmark,Network Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L2 - Enhanced Security Mode configuration for  Intranet zone sites,11_Microsoft_Edge_CIS_Benchmark,Network Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv3 - EDGE - L2 - Specify if online OCSPCRL checks are  required for local trust anchors,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Configure SMB v1 client driver,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Configure SMB v1 server,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Microsoft network client Digitally sign  communications (always),02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Network security LAN Manager authentication  level,02_Windows_CIS_Benchmark_Hardening,Network Security,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Require secure RPC communication,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,CISv4 - WIN - L1 - Set client connection encryption level,02_Windows_CIS_Benchmark_Hardening,Remote Access,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SC-8,netfilter,16_Defender_for_Endpoint_macOS,Network Security,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-16,Baseline - Chrome - Enable Site Isolation for specified origins,13_Google_Chrome_CIS_Benchmark,Browser Security (Chrome),L1,Chrome,mapped
+NIST SP 800-53 Rev 5,SI-16,CISv3 - EDGE - L2 - Control use of JavaScript JIT,11_Microsoft_Edge_CIS_Benchmark,Attack Surface Reduction (ASR),L2,Edge,mapped
+NIST SP 800-53 Rev 5,SI-16,CISv4 - WIN - L1 - ASR Block credential stealing from the  Windows local security authority subsystem,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-16,CISv4 - WIN - L1 - Configure Lsa Protected Process is set to  'Enabled with UEFI Lock,02_Windows_CIS_Benchmark_Hardening,Credential Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Adobe-Reader-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Advanced-Ransomware-Protection,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Email-Client-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Executable-Files-Prevalence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Exploited-Signed-Drivers,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-JS-VBScript-Downloaded-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Obfuscated-Scripts,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Office-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Office-Communication-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Office-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-PSExec-WMI-Process-Creation,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Safe-Mode-Reboot,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Untrusted-USB-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-WMI-Persistence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Block-Webshell-Creation-Exchange,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),N/A,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-16,Windows-Server-ASR-Enable-Controlled-Folder-Access,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,Baseline - Defender for Endpoint Linux ,01_Defender_for_Endpoint (Windows + Linux),Linux Endpoint Security,L1,Linux,mapped
+NIST SP 800-53 Rev 5,SI-2,Baseline - Microsoft Defender Antivirus,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-2,Baseline - Microsoft Defender Update controls,01_Defender_for_Endpoint (Windows + Linux),Patch Management,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-2,CISv3 - EDGE - L1 - Enable component updates in Microsoft Edge,11_Microsoft_Edge_CIS_Benchmark,Patch Management,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-2,CISv3 - EDGE - L1 - Update policy override default,11_Microsoft_Edge_CIS_Benchmark,Patch Management,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-2,CISv4 - WIN - L1 - Allow Auto Update,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-2,CISv4 - WIN - L1 - Defer Feature Updates Period in Days,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-2,CISv4 - WIN - L1 - Pause Updates,09_Patch_Management,Patch Management,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-2,Windows-Server-Defender-Antivirus,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,Windows-Server-Defender-Device-Tag,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,Windows-Server-Defender-Enable-File-Hash-Computation,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L2,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,Windows-Server-Defender-Security-Experience,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,Windows-Server-Defender-Update-Controls,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-2,com.microsoft.autoupdate2,16_Defender_for_Endpoint_macOS,Patch Management,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-2,com.microsoft.wdav,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-2,fulldisk,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-2,notif,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-3,ASR - BLOCK - Block Office applications from creating executable content,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,ASR - BLOCK - Block abuse of exploited vulnerable signed drivers (Device),01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,ASR - BLOCK - Block rebooting machine in Safe Mode,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,ASR - BLOCK - Enable Controlled Folder Access,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,ASR - BLOCK - Use advanced protection against ransomware,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Chrome Microsoft Defender Browser Protection,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Chrome,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Configure Windows protected print,14_Modern_Workplace_and_Resilience,Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Defender for Endpoint Linux ,01_Defender_for_Endpoint (Windows + Linux),Linux Endpoint Security,L1,Linux,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Microsoft Defender Antivirus,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Scareware Blocker in Microsoft Edge,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Windows AI - Block Microsoft Recall,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Windows AI - Disable Click To Do,10_Privacy_and_AI_Data_Governance,AI & Data Governance,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Baseline - Windows Defender  Security Experience,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv3 - EDGE - L1 - Allow download restrictions,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv3 - EDGE - L1 - Configure Edge Website Typo Protection,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv3 - EDGE - L1 - Configure Microsoft Defender SmartScreen,01_Defender_for_Endpoint (Windows + Linux),Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv3 - EDGE - L1 - Prevent bypassing Microsoft Defender SmartScreen prompts for sites,01_Defender_for_Endpoint (Windows + Linux),Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block Adobe Reader from creating child  processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block JavaScript or VBScript from  launching downloaded executable content,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block Office communication application  from creating child processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block Win32 API calls from Office  macros,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block all Office applications from creating  child processes,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block credential stealing from the  Windows local security authority subsystem,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block executable content from email  client and webmail,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block persistence through WMI event  subscription,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block process creations originating from  PSExec and WMI commands,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L1 - ASR Block untrusted and unsigned processes  that run from USB,01_Defender_for_Endpoint (Windows + Linux),Attack Surface Reduction (ASR),L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,CISv4 - WIN - L2 - Enable File Hash Computation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Adobe-Reader-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Advanced-Ransomware-Protection,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Email-Client-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Executable-Files-Prevalence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Exploited-Signed-Drivers,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-JS-VBScript-Downloaded-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Obfuscated-Scripts,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Office-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Office-Communication-Child-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Office-Executable-Content,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-PSExec-WMI-Process-Creation,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Safe-Mode-Reboot,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Untrusted-USB-Processes,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-WMI-Persistence,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Block-Webshell-Creation-Exchange,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),N/A,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-ASR-Enable-Controlled-Folder-Access,15_Defender_for_Endpoint_Windows_Server,Attack Surface Reduction (ASR),L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-Defender-Antivirus,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-Defender-Device-Tag,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-Defender-Enable-File-Hash-Computation,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L2,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-Defender-Security-Experience,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,Windows-Server-Defender-Update-Controls,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-3,bluetooth,16_Defender_for_Endpoint_macOS,Removable Media & USB,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-3,com.microsoft.wdav,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-3,fulldisk,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-3,notif,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-7,Baseline - App and Browser Isolation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-7,Baseline - Microsoft Defender Antivirus,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L1,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L1 - Allow remote debugging,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L1 - Enable browser legacy extension point blocking,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L1 - Enable security warnings for command-line flags,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L1,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L2 - Allow unconfigured sites to be reloaded in  Internet Explorer mode,11_Microsoft_Edge_CIS_Benchmark,Malware Protection,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L2 - AutoLaunch Protocols Component Enabled,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L2 - Control use of the Headless Mode,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv3 - EDGE - L2 - Show an Always open checkbox in external  protocol dialog,11_Microsoft_Edge_CIS_Benchmark,Edge Browser Security,L2,Edge,mapped
+NIST SP 800-53 Rev 5,SI-7,CISv4 - WIN - L2 - Enable File Hash Computation,01_Defender_for_Endpoint (Windows + Linux),Malware Protection,L2,Windows 11,mapped
+NIST SP 800-53 Rev 5,SI-7,Windows-Server-Defender-Antivirus,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-7,Windows-Server-Defender-Device-Tag,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-7,Windows-Server-Defender-Enable-File-Hash-Computation,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L2,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-7,Windows-Server-Defender-Security-Experience,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-7,Windows-Server-Defender-Update-Controls,15_Defender_for_Endpoint_Windows_Server,Malware Protection,L1,Windows Server,mapped
+NIST SP 800-53 Rev 5,SI-7,com.microsoft.wdav,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-7,fulldisk,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped
+NIST SP 800-53 Rev 5,SI-7,notif,16_Defender_for_Endpoint_macOS,Malware Protection,N/A,macOS,mapped

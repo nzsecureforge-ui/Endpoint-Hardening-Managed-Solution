@@ -1,0 +1,20 @@
+# Copy to terraform.tfvars per customer engagement (parallel to
+# ../config/customer.config.psd1.example, which the PowerShell deploy script reads).
+#
+# All three default to false in variables.tf even if this file is never copied — a fresh
+# engagement always starts in the static/manual pilot-expansion phase, never straight to
+# production-wide dynamic enforcement.
+#
+# Promotion sequence for a given platform, once you're ready:
+#   1. Confirm the static group (Intune-Target-<Platform>) has run clean for the engagement's
+#      agreed soak period (recommended: 3-4 weeks, no policy-related issues raised).
+#   2. Flip the matching flag below to true.
+#   3. terraform apply   (provisions the new -Dynamic group; the static group is untouched)
+#   4. Re-run: pwsh deploy/Deploy-IntuneBaseline.ps1 -RolloutStage Dynamic ...
+#
+# See ../README.md "Rollout model" for the full narrative, including why this is a second
+# group rather than the static one converted in place.
+
+windows_workstations_dynamic = false
+macos_dynamic                = false
+linux_dynamic                = false

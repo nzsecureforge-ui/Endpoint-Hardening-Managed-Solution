@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1">
+<dict>
+<key>PayloadUUID</key>
+<string>4A6B2F3E-8C1D-4E5A-9B7F-2D8E6A1C3F90</string>
+<key>PayloadType</key>
+<string>Configuration</string>
+<key>PayloadOrganization</key>
+<string>Secure Forge NZ</string>
+<key>PayloadIdentifier</key>
+<string>com.secureforge.macos.firewall</string>
+<key>PayloadDisplayName</key>
+<string>macOS - Application Firewall (Enforced)</string>
+<key>PayloadDescription</key>
+<string>Forces the built-in macOS Application Firewall on, with stealth mode enabled. Built from Apple's official device-management payload reference (com.apple.security.firewall) — not part of Microsoft Defender for Endpoint, this is Apple's native OS firewall.</string>
+<key>PayloadVersion</key>
+<integer>1</integer>
+<key>PayloadEnabled</key>
+<true/>
+<key>PayloadRemovalDisallowed</key>
+<true/>
+<key>PayloadScope</key>
+<string>System</string>
+<key>PayloadContent</key>
+<array>
+<dict>
+<key>PayloadUUID</key>
+<string>9E2C7A4F-1B6D-4A3E-8F5C-6D9B2E4A7C10</string>
+<key>PayloadType</key>
+<string>com.apple.security.firewall</string>
+<key>PayloadOrganization</key>
+<string>Secure Forge NZ</string>
+<key>PayloadIdentifier</key>
+<string>9E2C7A4F-1B6D-4A3E-8F5C-6D9B2E4A7C10</string>
+<key>PayloadDisplayName</key>
+<string>Firewall</string>
+<key>PayloadDescription</key>
+<string/>
+<key>PayloadVersion</key>
+<integer>1</integer>
+<key>PayloadEnabled</key>
+<true/>
+<key>EnableFirewall</key>
+<true/>
+<key>BlockAllIncoming</key>
+<false/>
+<key>EnableStealthMode</key>
+<true/>
+<key>AllowSigned</key>
+<true/>
+<key>AllowSignedApp</key>
+<true/>
+<key>EnableLogging</key>
+<true/>
+<key>LoggingOption</key>
+<string>brief</string>
+</dict>
+</array>
+</dict>
+</plist>

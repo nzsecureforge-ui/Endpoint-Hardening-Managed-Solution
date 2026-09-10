@@ -1,0 +1,24 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "description": null,
+  "displayName": "Baseline - MDE Device Tag",
+  "omaSettings@odata.type": "#Collection(microsoft.graph.omaSetting)",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingString",
+      "displayName": "MDE Device Tag",
+      "description": null,
+      "omaUri": "./Device/Vendor/MSFT/WindowsAdvancedThreatProtection/DeviceTagging/Group",
+      "secretReferenceValueId": null,
+      "isEncrypted": false,
+      "value": "Intune MWP"
+    }
+  ]
+}

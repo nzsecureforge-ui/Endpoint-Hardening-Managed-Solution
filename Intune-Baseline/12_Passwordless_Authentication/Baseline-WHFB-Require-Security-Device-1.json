@@ -1,0 +1,24 @@
+{
+  "@odata.type": "#microsoft.graph.windows10CustomConfiguration",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "description": null,
+  "displayName": "Baseline - WHFB Require Security Device - 1",
+  "omaSettings@odata.type": "#Collection(microsoft.graph.omaSetting)",
+  "omaSettings": [
+    {
+      "@odata.type": "#microsoft.graph.omaSettingBoolean",
+      "displayName": "RequireSecurityDevice",
+      "description": null,
+      "omaUri": "./User/Vendor/MSFT/PassportForWork/{TenantId}/Policies/RequireSecurityDevice",
+      "secretReferenceValueId": null,
+      "isEncrypted": false,
+      "value": true
+    }
+  ]
+}

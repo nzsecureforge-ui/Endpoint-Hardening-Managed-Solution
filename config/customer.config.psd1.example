@@ -1,0 +1,116 @@
+@{
+    # ---------------------------------------------------------------------
+    # REQUIRED — Test-CustomerConfig.ps1 refuses to let Deploy-IntuneBaseline.ps1
+    # proceed while any of these are still the placeholder value. This is the
+    # PowerShell equivalent of the CA-Baseline project's variables.tf validation
+    # blocks: it turns "silently breaks OneDrive / Teams / all browser extensions
+    # in production" (Production Notes #1, #14, #21, #23) into a hard stop before
+    # a single Graph call is made, not a surprise discovered after go-live.
+    # ---------------------------------------------------------------------
+
+    # This customer's Entra tenant ID (GUID). Consumed by:
+    #   - Baseline - One Drive management settings  (allowtenantlist)
+    #   - Baseline - Teams - Restrict sign in to Teams to accounts in specific tenants
+    # Deploying either with the placeholder below breaks OneDrive sync / blocks all
+    # Teams sign-in tenant-wide. See Production Notes #1 and #23.
+    EntraTenantId = "00000000-0000-0000-0000-000000000000"
+
+    # Extension IDs this customer has approved for Microsoft Edge. Deploying
+    # "CISv3 - EDGE - L2 - Configure extension management settings" with an empty
+    # list blocks ALL Edge extensions, including corporate VPN clients — see
+    # Production Note #14. Format: 32-character extension IDs from the Edge/Chrome
+    # Web Store, e.g. "aeblfdkhhhdcdjpifhhbdiojplfjncoa" (Ublock Origin's real ID,
+    # shown only as a format example — do not deploy it as an actual approval).
+    EdgeApprovedExtensionIds = @(
+        "REPLACE-WITH-CUSTOMER-APPROVED-EDGE-EXTENSION-ID"
+    )
+
+    # Same pattern for Chrome — Production Note #21. Only relevant if this customer
+    # is in scope for category 13 (Google Chrome CIS Benchmark).
+    ChromeApprovedExtensionIds = @(
+        "REPLACE-WITH-CUSTOMER-APPROVED-CHROME-EXTENSION-ID"
+    )
+
+    # ---------------------------------------------------------------------
+    # REQUIRED ONLY IF deploying category 16 (Defender for Endpoint - macOS)
+    # ---------------------------------------------------------------------
+
+    # DECIDE THIS NOW, BEFORE YOUR FIRST DEPLOY RUN — not mid-deploy when it throws.
+    # Category 16 (macOS) is in scope by default unless you pass -SkipCategories, and one
+    # of its 10 profiles needs this file. Two valid choices, pick one per engagement:
+    #
+    #   A) Skip macOS for now. Leave this $null and pass
+    #      -SkipCategories '16_Defender_for_Endpoint_macOS' to Deploy-IntuneBaseline.ps1
+    #      every time you run it, until you're ready to circle back to this category.
+    #   B) Include macOS in this run. Download WindowsDefenderATPOnboarding.xml FRESH
+    #      from THIS customer's own Defender portal (security.microsoft.com > Settings >
+    #      Endpoints > Device management > Onboarding > macOS > Intune) and set the real
+    #      path below before deploying. This file is tenant-specific and cannot be reused
+    #      between customers or pre-built — see
+    #      16_Defender_for_Endpoint_macOS/README_Onboarding_Package.md and Production Note #32.
+    #
+    # Leaving this $null without also passing -SkipCategories is what throws
+    # "MacOSOnboardingXmlPath is not set but -RequireMacOS was specified" partway into a run.
+    MacOSOnboardingXmlPath = $null
+
+    # ---------------------------------------------------------------------
+    # OPTIONAL — sensible baseline defaults, override per customer if needed
+    # ---------------------------------------------------------------------
+
+    # CIS default is 180 days (conservative). Production Note #11: some customers
+    # want 60-90. Only affects "Defer Feature Updates Period in Days".
+    FeatureUpdatePeriodDays = 180
+
+    # Assignment target group object IDs. Leave empty to have Deploy-IntuneBaseline.ps1
+    # resolve them by display name via Get-MgGroup at deploy time (requires the groups
+    # from ../terraform/groups.tf to already exist in the tenant — run
+    # `terraform apply` first). Populate explicitly (e.g. from `terraform output -json
+    # assignment_group_ids`) to skip that lookup.
+    AssignmentGroupIds = @{
+        # Rollout stage 1 — per-platform pilot rings (manual membership, first blast radius)
+        PilotWindowsWorkstations = $null
+        PilotWindowsServers      = $null
+        PilotMacOS               = $null
+        PilotLinux               = $null
+        # Rollout stage 2 — static per-platform target groups
+        WindowsWorkstations      = $null
+        WindowsServers           = $null
+        MacOS                    = $null
+        Linux                    = $null
+        # Excluded from every assignment at every stage. Deliberately ONE group, not split
+        # per platform like the tiers above — see terraform/groups.tf for the reasoning.
+        ExclusionBreakGlass      = $null
+    }
+
+    # RMM/remote-management tool executable paths to exclude from the PSExec/WMI
+    # process-creation ASR rule (Production Note #6) and any WinRM-basic-auth tools
+    # that need migrating off basic auth first (Production Note #12). Empty by
+    # default — fill in per customer if their RMM tooling is known to rely on either.
+    AsrPsExecWmiExclusions = @()
+
+    # Windows Quick Machine Recovery's offline recovery WiFi network (category 14,
+    # "Baseline - Cloud Remediation / quick machine recovery"). Optional — this
+    # feature is opt-in per customer, unlike the REQUIRED items above. Leaving both
+    # $null deploys the policy with placeholder network credentials: not a Graph
+    # error, just a recovery network that can't actually connect. Set both once this
+    # customer has a real network set aside for recovery, or leave $null if Quick
+    # Machine Recovery over WiFi isn't wanted for this tenant.
+    QuickMachineRecoverySsid     = $null
+    QuickMachineRecoveryPassword = $null
+
+    # Origins for "Baseline - Chrome - Enable Site Isolation for specified origins"
+    # (category 13). The source pack ships this with the literal placeholder "<YOURSITE>",
+    # which deploys without error and protects nothing — set the customer's real origins,
+    # or skip the policy with:
+    #   -SkipPolicyIds '13-Google-Chrome-CIS-Benchmark/Baseline-Chrome-Enable-Site-Isolation-for-specified-origins'
+    # Format: full origins including scheme, e.g. @("https://intranet.customer.com").
+    ChromeIsolatedOrigins = @()
+
+    # What happens to a device that fails the Linux Device Encryption COMPLIANCE policy
+    # (category 06). The policy is reporting-only (see RECONCILIATION.md #7), but its
+    # scheduled action still decides how quickly a failing device is marked non-compliant —
+    # which matters if this tenant's Conditional Access baseline gates on compliance.
+    # Default 24 hours' grace, deliberately not 0, so a device has a window to remediate
+    # before it can lose access. Set to 0 to mark non-compliant immediately.
+    ComplianceNoncompliantGracePeriodHours = 24
+}

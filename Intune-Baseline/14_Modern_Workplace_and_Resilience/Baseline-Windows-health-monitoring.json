@@ -1,0 +1,17 @@
+{
+  "@odata.type": "#microsoft.graph.windowsHealthMonitoringConfiguration",
+  "roleScopeTagIds@odata.type": "#Collection(String)",
+  "roleScopeTagIds": [
+    "0"
+  ],
+  "deviceManagementApplicabilityRuleOsEdition": null,
+  "deviceManagementApplicabilityRuleOsVersion": null,
+  "deviceManagementApplicabilityRuleDeviceMode": null,
+  "description": "",
+  "displayName": "Baseline - Windows health monitoring",
+  "allowDeviceHealthMonitoring@odata.type": "#microsoft.graph.enablement",
+  "allowDeviceHealthMonitoring": "enabled",
+  "configDeviceHealthMonitoringScope@odata.type": "#microsoft.graph.windowsHealthMonitoringScope",
+  "configDeviceHealthMonitoringScope": "bootPerformance,windowsUpdates",
+  "configDeviceHealthMonitoringCustomScope": null
+}

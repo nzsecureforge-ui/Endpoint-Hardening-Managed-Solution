@@ -1,0 +1,104 @@
+{
+ "@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies(assignments(),settings())/$entity",
+ "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicy",
+ "@odata.id": "deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')",
+ "@odata.editLink": "deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')",
+ "createdDateTime@odata.type": "#DateTimeOffset",
+ "createdDateTime": "2025-08-28T11:27:44.6024251Z",
+ "creationSource": null,
+ "lastModifiedDateTime@odata.type": "#DateTimeOffset",
+ "lastModifiedDateTime": "2025-08-28T11:27:44.6024251Z",
+ "name": "Windows-Server-ASR-Block-Untrusted-USB-Processes",
+ "platforms@odata.type": "#microsoft.graph.deviceManagementConfigurationPlatforms",
+ "platforms": "windows10",
+ "priorityMetaData": null,
+ "roleScopeTagIds@odata.type": "#Collection(String)",
+ "roleScopeTagIds": [
+  "0"
+ ],
+ "settingCount": 1,
+ "technologies@odata.type": "#microsoft.graph.deviceManagementConfigurationTechnologies",
+ "technologies": "mdm",
+ "id": "35f623c2-243f-45bf-aa6f-a1d11416ce1c",
+ "templateReference": {
+  "@odata.type": "#microsoft.graph.deviceManagementConfigurationPolicyTemplateReference",
+  "templateId": "",
+  "templateFamily@odata.type": "#microsoft.graph.deviceManagementConfigurationTemplateFamily",
+  "templateFamily": "none",
+  "templateDisplayName": null,
+  "templateDisplayVersion": null
+ },
+ "assignments@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/assignments",
+ "assignments@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/assignments/$ref",
+ "assignments@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/assignments",
+ "assignments": [],
+ "settings@odata.context": "https://graph.microsoft.com/beta/$metadata#deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings",
+ "settings@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings/$ref",
+ "settings@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings",
+ "settings": [
+  {
+   "@odata.type": "#microsoft.graph.deviceManagementConfigurationSetting",
+   "@odata.id": "deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings('0')",
+   "@odata.editLink": "deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings('0')",
+   "id": "0",
+   "settingInstance": {
+    "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingCollectionInstance",
+    "settingDefinitionId": "device_vendor_msft_policy_config_defender_attacksurfacereductionrules",
+    "settingInstanceTemplateReference": null,
+    "groupSettingCollectionValue@odata.type": "#Collection(microsoft.graph.deviceManagementConfigurationGroupSettingValue)",
+    "groupSettingCollectionValue": [
+     {
+      "@odata.type": "#microsoft.graph.deviceManagementConfigurationGroupSettingValue",
+      "settingValueTemplateReference": null,
+      "children@odata.type": "#Collection(microsoft.graph.deviceManagementConfigurationSettingInstance)",
+      "children": [
+       {
+        "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingInstance",
+        "settingDefinitionId": "device_vendor_msft_policy_config_defender_attacksurfacereductionrules_blockuntrustedunsignedprocessesthatrunfromusb",
+        "settingInstanceTemplateReference": null,
+        "choiceSettingValue": {
+         "@odata.type": "#microsoft.graph.deviceManagementConfigurationChoiceSettingValue",
+         "settingValueTemplateReference": null,
+         "value": "device_vendor_msft_policy_config_defender_attacksurfacereductionrules_blockuntrustedunsignedprocessesthatrunfromusb_block",
+         "children@odata.type": "#Collection(microsoft.graph.deviceManagementConfigurationSettingInstance)",
+         "children": []
+        }
+       }
+      ]
+     }
+    ]
+   },
+   "settingDefinitions@odata.associationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings('0')/settingDefinitions/$ref",
+   "settingDefinitions@odata.navigationLink": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/settings('0')/settingDefinitions"
+  }
+ ],
+ "#microsoft.graph.assign": {
+  "title": "microsoft.graph.assign",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.assign"
+ },
+ "#microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.clearEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.createCopy": {
+  "title": "microsoft.graph.createCopy",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.createCopy"
+ },
+ "#microsoft.graph.reorder": {
+  "title": "microsoft.graph.reorder",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.reorder"
+ },
+ "#microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.retrieveEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.setEnrollmentTimeDeviceMembershipTarget": {
+  "title": "microsoft.graph.setEnrollmentTimeDeviceMembershipTarget",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.setEnrollmentTimeDeviceMembershipTarget"
+ },
+ "#microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy": {
+  "title": "microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy",
+  "target": "https://graph.microsoft.com/beta/deviceManagement/configurationPolicies('35f623c2-243f-45bf-aa6f-a1d11416ce1c')/microsoft.graph.retrieveLatestUpgradeDefaultBaselinePolicy"
+ },
+ "description": "[Windows Server variant] Windows-Server-ASR-Block-Untrusted-USB-Processes \u2014 see source: CISv4 - WIN - L1 - ASR Block untrusted and unsigned processes  that run from USB.json"
+}

@@ -1,0 +1,34 @@
+# Live credentials / secrets
+app-registration.env
+*.env
+
+# Per-customer config (contains tenant ID, extension allow-lists, etc.) — never committed;
+# only the .example template is tracked.
+config/customer.config.psd1
+
+# Terraform state and working files (local state only, per customer — see README.md
+# "End of engagement")
+terraform/.terraform/
+terraform/.terraform.lock.hcl
+terraform/terraform.tfstate
+terraform/terraform.tfstate.backup
+terraform/terraform.tfstate.*.backup
+terraform/*.tfplan
+terraform/crash.log
+terraform/crash.*.log
+
+# Per-customer rollout-stage flags (which platforms have been promoted to the Dynamic/
+# production tier) — never committed; only the .example template is tracked. Same reasoning
+# as config/customer.config.psd1 above.
+terraform/terraform.tfvars
+
+# Verification output (per-engagement records — keep with the engagement, not the repo)
+verify/*.csv
+
+# Python
+__pycache__/
+*.pyc
+
+# OS noise
+.DS_Store
+Thumbs.db

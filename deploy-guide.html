@@ -1,0 +1,1187 @@
+<title>Deploying the Intune Baseline</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+  :root {
+    --paper: #f3f3f0;
+    --paper-raised: #ffffff;
+    --ink: #171a21;
+    --ink-soft: #4b505c;
+    --ink-faint: #868b95;
+    --border: #dcdcd7;
+    --border-strong: #c6c6c0;
+
+    --terraform: #6a44c4;
+    --terraform-soft: #f0ecfa;
+    --terraform-ink: #4a2e96;
+
+    --graph: #1f6fb2;
+    --graph-soft: #e8f1fa;
+    --graph-ink: #144d80;
+
+    --portal: #0e7c86;
+    --portal-soft: #e6f4f5;
+    --portal-ink: #0a5860;
+
+    --warn: #9a5b00;
+    --warn-soft: #faf0dc;
+    --danger: #a93a3a;
+    --danger-soft: #fbeaea;
+    --success: #1f7a4d;
+    --success-soft: #e7f5ee;
+
+    --term-bg: #14161c;
+    --term-ink: #e4e6ea;
+    --term-faint: #7d8391;
+    --term-accent: #9b8cff;
+    --term-graph: #6fb3f0;
+
+    --shadow: 0 1px 2px rgba(23,26,33,0.04), 0 8px 24px -12px rgba(23,26,33,0.12);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #15171c;
+      --paper-raised: #1b1e25;
+      --ink: #edeef0;
+      --ink-soft: #b6bac2;
+      --ink-faint: #7a7f89;
+      --border: #2b2e36;
+      --border-strong: #3a3e48;
+
+      --terraform: #a58aef;
+      --terraform-soft: #251c3d;
+      --terraform-ink: #cabcf6;
+
+      --graph: #6fb3f0;
+      --graph-soft: #12283c;
+      --graph-ink: #a4d3fb;
+
+      --portal: #52c6d1;
+      --portal-soft: #0e2b2d;
+      --portal-ink: #8fdde3;
+
+      --warn: #dfa84a;
+      --warn-soft: #332707;
+      --danger: #e28080;
+      --danger-soft: #331616;
+      --success: #63c795;
+      --success-soft: #10291c;
+
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #15171c;
+    --paper-raised: #1b1e25;
+    --ink: #edeef0;
+    --ink-soft: #b6bac2;
+    --ink-faint: #7a7f89;
+    --border: #2b2e36;
+    --border-strong: #3a3e48;
+
+    --terraform: #a58aef;
+    --terraform-soft: #251c3d;
+    --terraform-ink: #cabcf6;
+
+    --graph: #6fb3f0;
+    --graph-soft: #12283c;
+    --graph-ink: #a4d3fb;
+
+    --portal: #52c6d1;
+    --portal-soft: #0e2b2d;
+    --portal-ink: #8fdde3;
+
+    --warn: #dfa84a;
+    --warn-soft: #332707;
+    --danger: #e28080;
+    --danger-soft: #331616;
+    --success: #63c795;
+    --success-soft: #10291c;
+
+    --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'IBM Plex Sans', -apple-system, 'Segoe UI', sans-serif;
+    line-height: 1.6;
+    font-size: 16px;
+  }
+  code, .mono, kbd { font-family: 'IBM Plex Mono', ui-monospace, Consolas, monospace; }
+
+  h1, h2, h3 { font-family: 'IBM Plex Sans', sans-serif; font-weight: 600; text-wrap: balance; color: var(--ink); }
+  a { color: var(--terraform-ink); }
+
+  .wrap { max-width: 900px; margin: 0 auto; padding: 0 24px 96px; }
+
+  /* ---------- Header ---------- */
+  header.hero {
+    border-bottom: 1px solid var(--border);
+    padding: 56px 0 40px;
+    margin-bottom: 48px;
+  }
+  .eyebrow {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--graph-ink);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 14px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--graph);
+    display: inline-block;
+  }
+  h1.title { font-size: 40px; line-height: 1.12; margin: 0 0 14px; letter-spacing: -0.01em; }
+  .subtitle { font-size: 18px; color: var(--ink-soft); max-width: 64ch; margin: 0 0 28px; }
+  .meta-row { display: flex; flex-wrap: wrap; gap: 10px; }
+  .pill {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12.5px;
+    padding: 5px 11px;
+    border-radius: 100px;
+    border: 1px solid var(--border-strong);
+    color: var(--ink-soft);
+    background: var(--paper-raised);
+  }
+
+  /* ---------- Stepper ---------- */
+  .stepper {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 2px;
+    margin: 40px 0 8px;
+    border-radius: 10px;
+    overflow: auto;
+    background: var(--border);
+  }
+  .step-node {
+    background: var(--paper-raised);
+    padding: 14px 10px;
+    min-width: 92px;
+  }
+  .step-node .num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--ink-faint);
+    margin-bottom: 6px;
+  }
+  .step-node .lbl { font-size: 12.5px; font-weight: 600; color: var(--ink); line-height: 1.3; }
+
+  /* ---------- Sections ---------- */
+  section { margin: 64px 0; }
+  .section-head { display: flex; align-items: baseline; gap: 14px; margin-bottom: 8px; }
+  .section-num {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 15px;
+    color: var(--graph-ink);
+    background: var(--graph-soft);
+    border-radius: 6px;
+    padding: 2px 8px;
+    flex-shrink: 0;
+  }
+  h2.section-title { font-size: 26px; margin: 0; }
+  .section-sub { color: var(--ink-soft); font-size: 15.5px; max-width: 68ch; margin: 10px 0 28px; }
+
+  p { max-width: 68ch; }
+  ul, ol { max-width: 66ch; padding-left: 22px; }
+  li { margin-bottom: 8px; }
+
+  /* ---------- Lane steps (Terraform / Graph SDK / Portal / File) ---------- */
+  .step {
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border-strong);
+    border-radius: 8px;
+    background: var(--paper-raised);
+    padding: 20px 22px;
+    margin: 18px 0;
+    box-shadow: var(--shadow);
+  }
+  .step.lane-terraform { border-left-color: var(--terraform); }
+  .step.lane-graph { border-left-color: var(--graph); }
+  .step.lane-portal { border-left-color: var(--portal); }
+  .step.lane-file { border-left-color: var(--ink-faint); }
+
+  .lane-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    padding: 3px 9px;
+    border-radius: 5px;
+    margin-bottom: 12px;
+  }
+  .lane-terraform .lane-tag { background: var(--terraform-soft); color: var(--terraform-ink); }
+  .lane-graph .lane-tag { background: var(--graph-soft); color: var(--graph-ink); }
+  .lane-portal .lane-tag { background: var(--portal-soft); color: var(--portal-ink); }
+  .lane-file .lane-tag { background: var(--border); color: var(--ink-soft); }
+
+  .step h3 { font-size: 16.5px; margin: 0 0 8px; }
+  .step p:last-child { margin-bottom: 0; }
+  .step p { font-size: 15px; color: var(--ink-soft); }
+  .step ul { margin: 8px 0; padding-left: 20px; font-size: 15px; color: var(--ink-soft); }
+  .step ul li { margin: 4px 0; }
+  .step ul li:last-child:last-of-type { margin-bottom: 0; }
+
+  /* ---------- Code / terminal mockup ---------- */
+  pre.code-block {
+    background: var(--term-bg);
+    color: var(--term-ink);
+    border-radius: 8px;
+    padding: 16px 18px;
+    overflow-x: auto;
+    font-size: 13.5px;
+    line-height: 1.65;
+    margin: 14px 0 4px;
+  }
+  pre.code-block code { color: inherit; }
+  .term-mock {
+    background: var(--term-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px 0;
+    box-shadow: var(--shadow);
+  }
+  .term-mock .chrome {
+    display: flex; gap: 6px;
+    padding: 10px 14px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .term-mock .dot { width: 10px; height: 10px; border-radius: 50%; }
+  .term-mock .dot:nth-child(1) { background: #e6685a; }
+  .term-mock .dot:nth-child(2) { background: #e8b448; }
+  .term-mock .dot:nth-child(3) { background: #4bc26a; }
+  .term-mock .body {
+    padding: 16px 18px 20px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    line-height: 1.7;
+    color: var(--term-ink);
+    white-space: pre-wrap;
+    overflow-x: auto;
+  }
+  .term-mock .dim { color: var(--term-faint); }
+  .term-mock .accent { color: var(--term-accent); }
+  .term-mock .gaccent { color: var(--term-graph); }
+  .term-mock .ok { color: #6fd39a; }
+  .term-mock .warn2 { color: #e8b448; }
+  .caption {
+    font-size: 12.5px;
+    color: var(--ink-faint);
+    margin: 8px 0 0;
+    font-style: italic;
+  }
+
+  /* ---------- Portal mockup ---------- */
+  .portal-mock {
+    border: 1px solid var(--border-strong);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 16px 0;
+    box-shadow: var(--shadow);
+  }
+  .portal-mock .chrome {
+    background: var(--portal-soft);
+    padding: 9px 14px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11.5px;
+    color: var(--portal-ink);
+    border-bottom: 1px solid var(--border);
+  }
+  .portal-mock .body { background: var(--paper-raised); padding: 20px 22px; }
+  .portal-mock h4 { margin: 0 0 4px; font-size: 15px; }
+  .portal-mock .desc { font-size: 13.5px; color: var(--ink-soft); margin-bottom: 16px; }
+  .perm-row {
+    display: flex; align-items: center; gap: 10px;
+    padding: 9px 0; border-top: 1px solid var(--border); font-size: 13.5px;
+  }
+  .perm-row:first-of-type { border-top: none; }
+  .check {
+    width: 16px; height: 16px; border-radius: 4px;
+    background: var(--success-soft); color: var(--success);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; flex-shrink: 0;
+  }
+
+  /* ---------- Callouts ---------- */
+  .callout {
+    border-radius: 8px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    font-size: 14.5px;
+    max-width: 68ch;
+  }
+  .callout .callout-head { font-weight: 600; font-size: 13px; text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 6px; display: flex; align-items: center; gap: 7px; }
+  .callout.warn { background: var(--warn-soft); color: var(--warn); }
+  .callout.danger { background: var(--danger-soft); color: var(--danger); }
+  .callout.success { background: var(--success-soft); color: var(--success); }
+  .callout p, .callout li { color: inherit; opacity: 0.92; }
+  .callout ul { margin: 6px 0 0; }
+  .callout code { color: inherit; }
+
+  /* ---------- Concept table ---------- */
+  .concept-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); border: 1px solid var(--border); border-radius: 8px; overflow: hidden; margin: 20px 0; }
+  .concept-grid .c-head { background: var(--paper); font-family: 'IBM Plex Mono', monospace; font-size: 11.5px; text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); padding: 10px 16px; }
+  .concept-grid .c-cell { background: var(--paper-raised); padding: 14px 16px; font-size: 14.5px; }
+  .concept-grid .c-cell.term { color: var(--ink-soft); font-size: 13.5px; }
+  .concept-grid .c-cell strong { color: var(--ink); }
+
+  /* ---------- Architecture diagram ---------- */
+  .arch { margin: 24px 0; }
+  .arch svg { width: 100%; height: auto; display: block; }
+  .arch text { font-family: 'IBM Plex Mono', monospace; }
+
+  /* ---------- Path box ---------- */
+  .path-box {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    background: var(--paper);
+    border: 1px dashed var(--border-strong);
+    border-radius: 6px;
+    padding: 10px 14px;
+    word-break: break-all;
+    color: var(--ink-soft);
+    margin: 10px 0;
+  }
+
+  /* ---------- Screenshot request card ---------- */
+  .send-card {
+    display: flex; gap: 14px;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 16px 18px;
+    background: var(--paper-raised);
+    margin: 12px 0;
+  }
+  .send-card .n { font-family: 'IBM Plex Mono', monospace; color: var(--graph-ink); font-weight: 600; flex-shrink: 0; }
+  .send-card p { margin: 0; font-size: 14.5px; color: var(--ink-soft); }
+  .send-card strong { color: var(--ink); }
+
+  /* ---------- Principle banner ---------- */
+  .principle {
+    border: 1.5px solid var(--ink);
+    border-radius: 10px;
+    padding: 26px 28px;
+    margin-bottom: 56px;
+    background: var(--paper-raised);
+    box-shadow: var(--shadow);
+  }
+  .principle .p-head {
+    display: flex; align-items: center; gap: 10px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 10px;
+  }
+  .principle .p-head .shield { color: var(--graph-ink); font-size: 15px; }
+  .principle h2 { font-size: 21px; margin: 0 0 10px; }
+  .principle p { font-size: 15px; color: var(--ink-soft); margin: 0 0 12px; max-width: 72ch; }
+  .principle p:last-child { margin-bottom: 0; }
+  .principle .rule-row {
+    display: flex; gap: 12px; align-items: flex-start;
+    padding: 10px 0; border-top: 1px solid var(--border);
+    font-size: 14.5px;
+  }
+  .principle .rule-row:first-of-type { border-top: none; padding-top: 4px; }
+  .principle .rule-row .tick { color: var(--success); flex-shrink: 0; font-weight: 600; }
+  .principle .rule-row strong { color: var(--ink); }
+  .principle .rule-row span.detail { color: var(--ink-soft); }
+
+  /* ---------- Rollout-stage table ---------- */
+  table.stage-table {
+    width: 100%; border-collapse: collapse; margin: 16px 0 12px;
+    font-size: 14.5px; border: 1px solid var(--border); border-radius: 8px; overflow: hidden;
+  }
+  table.stage-table th, table.stage-table td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--border); }
+  table.stage-table th {
+    background: var(--paper); font-family: 'IBM Plex Mono', monospace; font-size: 11.5px;
+    text-transform: uppercase; letter-spacing: .05em; color: var(--ink-faint); font-weight: 600;
+  }
+  table.stage-table td { color: var(--ink-soft); background: var(--paper-raised); }
+  table.stage-table td:first-child { color: var(--ink); font-weight: 600; }
+  table.stage-table tr:last-child td { border-bottom: none; }
+
+  /* ---------- Unverified tracker ---------- */
+  .unverified-grid { display: grid; gap: 12px; margin: 20px 0; }
+  .unv-row {
+    display: grid; grid-template-columns: 30px 1fr; gap: 12px;
+    border: 1px solid var(--border); border-radius: 8px;
+    padding: 14px 16px; background: var(--paper-raised);
+    font-size: 14.5px;
+  }
+  .unv-row .u-mark { color: var(--warn); font-size: 17px; line-height: 1.4; }
+  .unv-row strong { color: var(--ink); }
+  .unv-row .detail { color: var(--ink-soft); font-size: 14px; margin-top: 2px; }
+
+  footer.close {
+    border-top: 1px solid var(--border);
+    padding-top: 32px;
+    margin-top: 72px;
+    color: var(--ink-soft);
+    font-size: 14.5px;
+  }
+
+  @media (max-width: 640px) {
+    h1.title { font-size: 30px; }
+    .stepper { grid-template-columns: repeat(3, 1fr); }
+    .concept-grid { grid-template-columns: 1fr; }
+  }
+</style>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Intune Device Management Baseline &middot; First deploy</div>
+    <h1 class="title">Deploying the Intune Baseline</h1>
+    <p class="subtitle">A click-by-click walkthrough for a security engineer who has never run this project before — from an empty machine to 9 assignment groups and 222 policies deployed in a demo Intune tenant, plus why this project uses two tools instead of one.</p>
+    <div class="meta-row">
+      <span class="pill">Platform: Windows + VS Code</span>
+      <span class="pill">Target: demo Intune tenant</span>
+      <span class="pill">Est. time: 100&ndash;140 min, first run</span>
+    </div>
+
+    <div class="stepper">
+      <div class="step-node"><div class="num">01</div><div class="lbl">Install</div></div>
+      <div class="step-node"><div class="num">02</div><div class="lbl">Get the project</div></div>
+      <div class="step-node"><div class="num">03</div><div class="lbl">Check licensing</div></div>
+      <div class="step-node"><div class="num">04</div><div class="lbl">Connect</div></div>
+      <div class="step-node"><div class="num">05</div><div class="lbl">Set customer values</div></div>
+      <div class="step-node"><div class="num">06</div><div class="lbl">Deploy groups</div></div>
+      <div class="step-node"><div class="num">07</div><div class="lbl">Deploy policies</div></div>
+      <div class="step-node"><div class="num">08</div><div class="lbl">Verify</div></div>
+      <div class="step-node"><div class="num">09</div><div class="lbl">Promote</div></div>
+      <div class="step-node"><div class="num">10</div><div class="lbl">Tear down</div></div>
+    </div>
+    <p class="caption">Every step below is tagged by where it happens — <span style="color:var(--terraform-ink)">&#9632; Terraform, in your terminal</span>, <span style="color:var(--graph-ink)">&#9632; the Graph SDK deploy script, also in your terminal</span>, <span style="color:var(--portal-ink)">&#9632; the Intune/Entra portal</span>, or <span style="color:var(--ink-faint)">&#9632; a file in VS Code</span>. Terraform and the deploy script are two different tools that happen to share one terminal window — phase 00 explains why there are two at all.</p>
+  </header>
+
+  <!-- ============ OPERATING PRINCIPLE ============ -->
+  <div class="principle">
+    <div class="p-head"><span class="shield">&#128737;</span> Operating principle</div>
+    <h2>No standing access, ever</h2>
+    <p>Phase 04 builds one app registration — used by <strong>both</strong> Terraform (for the 9 groups) and the deploy script (for the 222 policies). One credential, one thing to delete at the end of an engagement, scoped to exactly three Graph application permissions.</p>
+    <div class="rule-row">
+      <span class="tick">&#10003;</span>
+      <span><strong>Deleted after every real engagement, not just this demo.</strong> <span class="detail">Once a customer deployment is validated, the app registration — and its client secret — is removed. This is the standing pattern for every tenant this baseline goes into, not a demo-only step.</span></span>
+    </div>
+    <div class="rule-row">
+      <span class="tick">&#10003;</span>
+      <span><strong>The baseline outlives the credential.</strong> <span class="detail">The groups and 222 policies are independent Intune/Entra objects — deleting the app registration doesn't touch them. The customer keeps a fully deployed baseline; what's removed is the standing ability to reconfigure it from outside their own admin workflow.</span></span>
+    </div>
+    <div class="rule-row">
+      <span class="tick">&#10003;</span>
+      <span><strong>Why it matters here specifically.</strong> <span class="detail"><code>DeviceManagementConfiguration.ReadWrite.All</code> is a tenant-wide application permission — not scoped to just the 222 policies this deployment touches. A live credential with that reach, sitting unused between engagements, is exactly the kind of orphaned automation access a security review flags.</span></span>
+    </div>
+    <div class="rule-row">
+      <span class="tick">&#10003;</span>
+      <span><strong>Not a one-way door.</strong> <span class="detail">Returning to a tenant later means re-running the bootstrap script for a fresh app registration — Terraform's state picks up the same 6 groups by their existing IDs, and the deploy script's idempotent get-by-name logic recognizes the 222 policies already there.</span></span>
+    </div>
+    <p>See <strong>phase 10</strong> for the exact deletion steps.</p>
+  </div>
+
+  <!-- ============ SECTION 0 : WHY TWO TOOLS ============ -->
+  <section id="why">
+    <div class="section-head"><span class="section-num">00</span><h2 class="section-title">Why two tools, not one</h2></div>
+    <p class="section-sub">The Conditional Access baseline is one <code>terraform apply</code>, start to finish. This project isn't — and that's worth understanding before you run anything, because it's the one place this deployment genuinely differs in shape, not just in content.</p>
+
+    <p>There is no official Terraform provider for Intune device management. HashiCorp and Microsoft haven't shipped one — <code>configurationPolicies</code>, <code>deviceConfigurations</code>, <code>intents</code>, and <code>compliancePolicies</code> simply aren't resources <code>hashicorp/azuread</code> or <code>hashicorp/azurerm</code> know how to manage (the gap is tracked, unresolved, in <a href="https://github.com/hashicorp/terraform-provider-azuread/issues/524" target="_blank" rel="noopener">hashicorp/terraform-provider-azuread&nbsp;#524</a>). The only providers that cover it — <code>deploymenttheory/terraform-provider-microsoft365</code>, <code>terraprovider/terraform-provider-microsoft365wp</code> — are small, community-maintained projects wrapping the same beta Graph API this deploy script calls directly.</p>
+
+    <div class="concept-grid">
+      <div class="c-head">What a community provider would cost us</div>
+      <div class="c-head">What we chose instead, and why</div>
+
+      <div class="c-cell"><strong>A third-party trust dependency</strong> — its code runs with app-only credentials against every customer tenant</div>
+      <div class="c-cell term">The official <code>Microsoft.Graph.Authentication</code> SDK, calling the same stable REST contract Microsoft documents at <code>learn.microsoft.com/graph</code> — no maintainer we haven't vetted sits between this deploy and a customer's tenant.</div>
+
+      <div class="c-cell"><strong>An awkward audit answer</strong> — "our tooling depends on a solo-maintained GitHub project" is a hard sentence in a NIST/ISO-mapped engagement</div>
+      <div class="c-cell term">"Official Microsoft Graph SDK and HashiCorp's own <code>azuread</code> provider" is a clean one — consistent with how this MSSP already answers that question for the Conditional Access baseline.</div>
+
+      <div class="c-cell"><strong>Exposure to a maintainer's release cadence</strong> — Microsoft's beta Graph endpoints change often; a small provider can lag a fix for weeks</div>
+      <div class="c-cell term">This project regenerates its own request bodies straight from the customer's source JSON via <code>build_baseline.py</code> — no intermediate schema to wait on someone else to update.</div>
+
+      <div class="c-cell"><strong>Precedent</strong> — the CA baseline already answered a similar question once</div>
+      <div class="c-cell term">CA pushed its one Terraform-unsupported object (a Terms of Use agreement) out to a scripted manual step rather than reach for a workaround provider. This project applies the same rule at a larger scale: 222 policies, not one object.</div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-head">&#9888; The honest cost of this choice</div>
+      <p>Terraform's real value for the 222 policies — a <code>terraform plan</code> diff before anything touches a tenant, state-tracked drift detection, mature idempotency — isn't available here. <code>Deploy-IntuneBaseline.ps1</code> approximates it by hand: get-all-by-name, then create-or-update, with <code>Verify-Deployment.ps1</code> standing in for drift detection afterward. That's more code to own, and it's had <strong>zero live-tenant runs</strong> before today — see the unverified-assumptions tracker in phase 07 for exactly where to expect friction on this first deploy.</p>
+    </div>
+
+    <p>So the split is deliberate: <strong>Terraform owns the "who"</strong> — the 9 device assignment groups, a plain Entra ID object type both providers handle identically — and <strong>the Graph SDK owns the "what"</strong> — the 222 policy objects themselves, generated fresh from the customer's source pack every time, never hand-edited.</p>
+  </section>
+
+  <!-- ============ ARCHITECTURE ============ -->
+  <section id="architecture">
+    <div class="section-head"><span class="section-num">&#9670;</span><h2 class="section-title">How the pieces connect</h2></div>
+    <p class="section-sub">One diagram worth having in your head before you start — this is what you're building over the next ten phases.</p>
+
+    <div class="arch">
+      <svg viewBox="0 0 900 270" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="9" markerHeight="9" refX="7" refY="4" orient="auto">
+            <path d="M0,0 L8,4 L0,8 Z" fill="var(--ink-faint)"></path>
+          </marker>
+        </defs>
+
+        <!-- Terminal box -->
+        <rect x="16" y="70" width="180" height="120" rx="10" fill="var(--terraform-soft)" stroke="var(--terraform)" stroke-width="1.5"></rect>
+        <text x="106" y="98" text-anchor="middle" font-size="12" fill="var(--terraform-ink)" font-weight="600">YOUR TERMINAL</text>
+        <text x="106" y="120" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">Terraform +</text>
+        <text x="106" y="138" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">deploy script,</text>
+        <text x="106" y="156" text-anchor="middle" font-size="11.5" fill="var(--ink-soft)">reading manifest.json</text>
+
+        <line x1="196" y1="130" x2="256" y2="130" stroke="var(--ink-faint)" stroke-width="1.5" marker-end="url(#arrow)"></line>
+        <text x="226" y="118" text-anchor="middle" font-size="10" fill="var(--ink-faint)">app credentials</text>
+
+        <!-- App registration -->
+        <rect x="260" y="70" width="170" height="120" rx="10" fill="var(--paper-raised)" stroke="var(--border-strong)" stroke-width="1.5"></rect>
+        <text x="345" y="98" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600">APP</text>
+        <text x="345" y="114" text-anchor="middle" font-size="12" fill="var(--ink)" font-weight="600">REGISTRATION</text>
+        <text x="345" y="138" text-anchor="middle" font-size="11" fill="var(--ink-soft)">3 Graph permissions,</text>
+        <text x="345" y="154" text-anchor="middle" font-size="11" fill="var(--ink-soft)">shared by both tools</text>
+
+        <line x1="430" y1="130" x2="490" y2="130" stroke="var(--ink-faint)" stroke-width="1.5" marker-end="url(#arrow)"></line>
+        <text x="460" y="118" text-anchor="middle" font-size="10" fill="var(--ink-faint)">Graph API</text>
+
+        <!-- Tenant box -->
+        <rect x="494" y="20" width="390" height="220" rx="10" fill="var(--portal-soft)" stroke="var(--portal)" stroke-width="1.5"></rect>
+        <text x="689" y="46" text-anchor="middle" font-size="12" fill="var(--portal-ink)" font-weight="600">YOUR INTUNE DEMO TENANT</text>
+
+        <rect x="514" y="66" width="170" height="90" rx="7" fill="var(--paper-raised)" stroke="var(--terraform)"></rect>
+        <text x="599" y="92" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-weight="600">6 groups</text>
+        <text x="599" y="108" text-anchor="middle" font-size="10" fill="var(--ink-faint)">device targeting</text>
+        <text x="599" y="124" text-anchor="middle" font-size="10" fill="var(--terraform-ink)">via Terraform</text>
+
+        <rect x="699" y="66" width="170" height="90" rx="7" fill="var(--paper-raised)" stroke="var(--graph)"></rect>
+        <text x="784" y="92" text-anchor="middle" font-size="11.5" fill="var(--ink)" font-weight="600">222 policies</text>
+        <text x="784" y="108" text-anchor="middle" font-size="10" fill="var(--ink-faint)">5 Graph shapes</text>
+        <text x="784" y="124" text-anchor="middle" font-size="10" fill="var(--graph-ink)">via the deploy script</text>
+
+        <text x="689" y="182" text-anchor="middle" font-size="11" fill="var(--portal-ink)">assignments wired by group</text>
+        <text x="689" y="198" text-anchor="middle" font-size="11" fill="var(--portal-ink)">display name — no manual</text>
+        <text x="689" y="214" text-anchor="middle" font-size="11" fill="var(--portal-ink)">GUID copying between tools</text>
+
+        <!-- Framework workbook, bottom -->
+        <line x1="106" y1="190" x2="106" y2="234" stroke="var(--ink-faint)" stroke-width="1.5" stroke-dasharray="3,3"></line>
+        <text x="106" y="250" text-anchor="middle" font-size="10.5" fill="var(--ink-faint)">implements CIS_Compliance_Baseline_v2.xlsx</text>
+      </svg>
+    </div>
+    <p class="caption">Illustrative — not a literal screenshot. The one thing to remember: both tools authenticate through the same app registration, which is why phase 04 sets up only one credential for both.</p>
+  </section>
+
+  <!-- ============ SECTION 1 : INSTALL ============ -->
+  <section id="install">
+    <div class="section-head"><span class="section-num">01</span><h2 class="section-title">Install the tools</h2></div>
+    <p class="section-sub">Six things. The first is the editor and terminal you'll do everything else in — the rest install via the Windows package manager (<code>winget</code>, already on Windows 10/11) or PowerShell's own module installer from inside it.</p>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>1.1 &nbsp;Visual Studio Code</h3>
+      <p>One window for the rest of this guide — file browser down the left, terminal built into the bottom.</p>
+      <pre class="code-block"><code>winget install -e --id Microsoft.VisualStudioCode</code></pre>
+      <p>Accept the defaults, then open VS Code from the Start menu.</p>
+    </div>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>1.2 &nbsp;Two extensions</h3>
+      <p>Click the Extensions icon (four squares, left edge), search by name, click <strong>Install</strong>:</p>
+      <ul>
+        <li><strong>HashiCorp Terraform</strong> (publisher: HashiCorp) — highlighting and validation on <code>terraform/groups.tf</code>.</li>
+        <li><strong>PowerShell</strong> (publisher: Microsoft) — proper support for every <code>.ps1</code> script in <code>bootstrap/</code>, <code>deploy/</code>, and <code>verify/</code>.</li>
+      </ul>
+      <p>Open a terminal with <code>Ctrl+&#96;</code> — every step tagged Terraform or Graph SDK below happens in this same panel.</p>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>1.3 &nbsp;Terraform CLI</h3>
+      <pre class="code-block"><code>winget install -e --id Hashicorp.Terraform</code></pre>
+      <pre class="code-block"><code>terraform -version</code></pre>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body"><span class="accent">PS&gt;</span> terraform -version
+Terraform v1.16.x
+on windows_amd64
++ provider registry.terraform.io/hashicorp/azuread <span class="dim">(not yet installed — that's expected)</span></div>
+      </div>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>1.4 &nbsp;PowerShell 7</h3>
+      <p>VS Code's terminal is probably Windows PowerShell 5.1 right now — the deploy script needs PowerShell 7.</p>
+      <pre class="code-block"><code>winget install --id Microsoft.PowerShell --source winget</code></pre>
+      <p>Then: terminal panel's <strong>&#9660;</strong> next to <strong>+</strong> &rarr; <strong>Select Default Profile</strong> &rarr; the entry pointing at <code>pwsh.exe</code>. Close the current tab, open a fresh one with <code>Ctrl+&#96;</code>. Check:</p>
+      <pre class="code-block"><code>$PSVersionTable.PSVersion</code></pre>
+      <p class="caption">Expect Major 7, Minor 4 or higher. Do the rest of this guide in this terminal.</p>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>1.5 &nbsp;Microsoft Graph PowerShell modules</h3>
+      <p>Three specific modules — not the full <code>Microsoft.Graph</code> meta-module. Notably, <strong>not</strong> <code>Microsoft.Graph.Beta.DeviceManagement</code>: the deploy script deliberately calls <code>Invoke-MgGraphRequest</code> against the stable REST endpoints directly, rather than depend on that module's fast-changing beta cmdlet surface — see phase 00.</p>
+      <pre class="code-block"><code>Install-Module Microsoft.Graph.Authentication -Scope CurrentUser -Force
+Install-Module Microsoft.Graph.Applications -Scope CurrentUser -Force
+Install-Module Microsoft.Graph.Identity.DirectoryManagement -Scope CurrentUser -Force</code></pre>
+      <pre class="code-block"><code>Get-InstalledModule Microsoft.Graph.Authentication, Microsoft.Graph.Applications, Microsoft.Graph.Identity.DirectoryManagement</code></pre>
+    </div>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File &middot; optional</span>
+      <h3>1.6 &nbsp;Python 3 + openpyxl — only if you're regenerating the baseline</h3>
+      <p>Skip this unless the customer's source policy pack changes and you need to re-run <code>scripts/build_baseline.py</code>. This project already ships a generated <code>Intune-Baseline/</code> — most engagements never touch this step.</p>
+      <pre class="code-block"><code>winget install -e --id Python.Python.3.12
+pip install openpyxl --break-system-packages</code></pre>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-head">&#9888; If a command isn't recognized</div>
+      <p>Close the current terminal tab and open a fresh one with <code>Ctrl+&#96;</code> after each <code>winget install</code> — PATH changes don't reach a tab that was already open. Still failing? Restart VS Code entirely.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 2 : GET THE PROJECT ============ -->
+  <section id="get-project">
+    <div class="section-head"><span class="section-num">02</span><h2 class="section-title">Get the project, one folder per customer</h2></div>
+    <p class="section-sub">This copy of the project is a reusable template, not a per-customer working folder — copy it fresh before you point it at any real tenant.</p>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>2.1 &nbsp;Copy the template to a customer-named folder</h3>
+      <p>The template lives here:</p>
+      <div class="path-box">C:\MSSP_Intune_Service_Terraform\MSSP_Intune_Service_Terraform\Intune-Baseline-Deploy</div>
+      <p>Copy that whole folder (not move it) to a new folder named for the customer you're deploying to, e.g.:</p>
+      <div class="path-box">C:\MSSP_Intune_Service_Terraform\Customers\Contoso-Ltd\Intune-Baseline-Deploy</div>
+      <p>One folder per customer is what actually prevents last week's <code>customer.config.psd1</code> or a stale <code>ARM_CLIENT_SECRET</code> export getting applied against the wrong tenant — the same rule the CA baseline follows.</p>
+    </div>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>2.2 &nbsp;Open that customer's folder in VS Code</h3>
+      <p><strong>File &rarr; Open Folder&hellip;</strong>, browse to the customer's <code>Intune-Baseline-Deploy</code> folder itself — the one directly containing <code>README.md</code> — and <strong>Select Folder</strong>.</p>
+      <p>VS Code will ask: <em>"Do you trust the authors of the files in this folder?"</em> Click <strong>Yes, I trust the authors</strong>.</p>
+      <p>The Explorer panel now shows <code>terraform\</code>, <code>deploy\</code>, <code>bootstrap\</code>, <code>config\</code>, <code>verify\</code>, <code>scripts\</code>, and <code>Intune-Baseline\</code> — that's what you'll click through instead of a separate File Explorer window.</p>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>2.3 &nbsp;Open the terminal here</h3>
+      <pre class="code-block"><code>dir</code></pre>
+      <p>Open a terminal with <code>Ctrl+&#96;</code>. Because you opened this specific folder, it starts right inside it. <code>dir</code> should list the same items visible in the Explorer panel.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 3 : LICENSING ============ -->
+  <section id="licensing">
+    <div class="section-head"><span class="section-num">03</span><h2 class="section-title">Confirm this tenant is licensed</h2></div>
+    <p class="section-sub">Categories 01, 15, and 16 assume Microsoft Defender for Endpoint Plan 2 — finding that out mid-deploy is a worse time than finding it out now, before any credential exists.</p>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>3.1 &nbsp;Run the prerequisite check</h3>
+      <pre class="code-block"><code>cd bootstrap
+.\Test-Prerequisites.ps1</code></pre>
+      <p>Read-only, delegated sign-in, no standing credential created — safe to run against a tenant you're only evaluating.</p>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Checking licensing for tenant &lt;tenant-id&gt;...
+
+  <span class="ok">[OK]</span>      Microsoft Intune  (matched: INTUNE_A)
+  <span class="ok">[OK]</span>      Microsoft Defender for Endpoint Plan 2  (matched: WINDEFATP)
+  <span class="warn2">[MISSING]</span> Entra ID P1/P2 (for the WHFB multi-factor-unlock template's Conditional Access reference)
+            Impact: Deploy the other 4 Passwordless Authentication policies; skip
+            'Baseline - WHFB Muti-Factor unlock Template config' or confirm it degrades gracefully.
+
+Prerequisite check complete.</div>
+      </div>
+      <p class="caption">Illustrative — a heuristic check against <code>subscribedSkus</code>, not an exhaustive license audit (see the script's own header comment). Treat a [MISSING] as "verify manually in the admin center," not gospel — bundled SKUs like Microsoft 365 E5 can expose these under names the script doesn't recognize yet.</p>
+      <div class="callout danger">
+        <div class="callout-head">&#9888; If Intune itself shows [MISSING]</div>
+        <p>The script exits non-zero and tells you to stop. Nearly every policy in this pack is an Intune object — confirm licensing by hand before running anything else in this guide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 4 : CONNECT ============ -->
+  <section id="connect">
+    <div class="section-head"><span class="section-num">04</span><h2 class="section-title">Connect — one app registration, two auth paths</h2></div>
+    <p class="section-sub">One script creates one app registration used by both tools, but Terraform and the deploy script authenticate with it differently: Terraform reads three <code>ARM_*</code> environment variables, the deploy script calls <code>Connect-MgGraph</code> directly with a client-secret credential object. Sign in as a Global Administrator (or Privileged Role Administrator + Application Administrator) for this whole section.</p>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>4.1 &nbsp;Run the app registration script</h3>
+      <pre class="code-block"><code>cd ..\bootstrap   <span class="dim"># if you're still in bootstrap\ from phase 03, skip the cd</span>
+.\New-AppRegistration.ps1</code></pre>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; If you get "cannot be loaded... not digitally signed"</div>
+        <p>Normal on a fresh Windows machine. Fix it for just this terminal tab, then re-run the script:</p>
+        <pre class="code-block"><code>Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+.\New-AppRegistration.ps1</code></pre>
+      </div>
+      <p>It opens a browser window asking you to sign in — use your Global Admin account. It creates an app registration called <code>Intune-Baseline-Deploy</code>, grants it three Graph API application permissions, and generates a client secret.</p>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Created app registration 'Intune-Baseline-Deploy' (a1b2c3d4-...).
+  [granted]          DeviceManagementConfiguration.ReadWrite.All
+  [granted]          Group.ReadWrite.All
+  [granted]          Application.Read.All
+
+<span class="accent">=== For terraform apply (groups.tf) ===</span>
+export ARM_TENANT_ID="&lt;your tenant id&gt;"
+export ARM_CLIENT_ID="&lt;the app's client id&gt;"
+export ARM_CLIENT_SECRET="&lt;a secret value&gt;"
+
+<span class="gaccent">=== For Deploy-IntuneBaseline.ps1 ===</span>
+$cert = ConvertTo-SecureString '&lt;secret&gt;' -AsPlainText -Force
+Connect-MgGraph -TenantId '&lt;tenant&gt;' -ClientSecretCredential (New-Object System.Management.Automation.PSCredential('&lt;app-id&gt;', $cert))
+
+<span class="dim">IMPORTANT: grant admin consent now:</span>
+<span class="accent">https://login.microsoftonline.com/&lt;tenant&gt;/adminconsent?client_id=&lt;app&gt;</span></div>
+      </div>
+      <p class="caption">Illustrative output — your actual IDs will be real GUIDs. It also writes these three <code>ARM_*</code> lines to <code>app-registration.env</code> — keep this window open, you need all of this in steps 4.3 and 4.4.</p>
+    </div>
+
+    <div class="step lane-portal">
+      <span class="lane-tag">Intune / Entra Portal</span>
+      <h3>4.2 &nbsp;Grant admin consent</h3>
+      <p>Copy the URL the script printed and open it in your browser (still signed in as Global Admin). You'll see a consent screen listing the three permissions — approve it.</p>
+      <div class="portal-mock">
+        <div class="chrome">login.microsoftonline.com/&hellip;/adminconsent</div>
+        <div class="body">
+          <h4>Permissions requested</h4>
+          <div class="desc"><strong>Intune-Baseline-Deploy</strong> wants to access resources in your organization on behalf of the signed-in user.</div>
+          <div class="perm-row"><span class="check">&#10003;</span> Read and write Microsoft Intune device configuration and policies</div>
+          <div class="perm-row"><span class="check">&#10003;</span> Read and write all groups</div>
+          <div class="perm-row"><span class="check">&#10003;</span> Read applications</div>
+        </div>
+      </div>
+      <p class="caption">Illustrative — Microsoft's actual consent screen may be worded slightly differently. Only three permissions listed — no <code>DeviceManagementManagedDevices.*</code> or <code>DeviceManagementApps.*</code>, deliberately: this deployment creates and assigns policies, it doesn't read device inventory or manage app deployments.</p>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>4.3 &nbsp;Set Terraform's credentials for this session</h3>
+      <p>Using the three <code>ARM_*</code> values from step 4.1, in the <strong>same terminal tab</strong>:</p>
+      <pre class="code-block"><code>$env:ARM_TENANT_ID     = "&lt;your tenant id&gt;"
+$env:ARM_CLIENT_ID     = "&lt;the app's client id&gt;"
+$env:ARM_CLIENT_SECRET = "&lt;the secret value&gt;"</code></pre>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; Session-only, on purpose</div>
+        <p>These three lines only apply to this one terminal tab and are gone once you close it — deliberate, so a live secret doesn't sit around in a saved profile. Closed the tab, or opened a new one? Re-run these three lines before touching Terraform again.</p>
+      </div>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>4.4 &nbsp;Save the deploy script's connection snippet</h3>
+      <p>The deploy script (phase 07) authenticates separately from Terraform — it calls <code>Connect-MgGraph</code> itself rather than reading environment variables. Copy the <code>$cert</code> / <code>Connect-MgGraph</code> block the script printed in step 4.1 somewhere you can paste it back in later — you'll run it once, right before phase 07.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 5 : CUSTOMER VALUES ============ -->
+  <section id="customer-values">
+    <div class="section-head"><span class="section-num">05</span><h2 class="section-title">Set this customer's values</h2></div>
+    <p class="section-sub">Four policies in the source pack ship with a placeholder value that actively breaks something if deployed as-is — this is the single most important step in this guide to get right before phase 07.</p>
+
+    <div class="callout danger">
+      <div class="callout-head">&#9888; The four landmines — see RECONCILIATION.md &sect;8 for full detail</div>
+      <ul>
+        <li><strong>OneDrive tenant restriction</strong> — blocks OneDrive for every tenant except one hardcoded in the source file, unless replaced with this customer's own Entra tenant ID.</li>
+        <li><strong>Teams tenant restriction</strong> — same failure mode, for Teams sign-in.</li>
+        <li><strong>Edge extension management (CIS L2)</strong> — ships with an effectively empty allow list; can silently block every extension the customer's users currently rely on.</li>
+        <li><strong>Chrome extension allow list</strong> — same failure mode as Edge, for Chrome.</li>
+      </ul>
+    </div>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>5.1 &nbsp;Create your copy of the config file</h3>
+      <p>In VS Code's Explorer, right-click <code>config\customer.config.psd1.example</code> &rarr; <strong>Copy</strong>, then right-click <code>config\</code> &rarr; <strong>Paste</strong>, and rename the copy to exactly <code>customer.config.psd1</code> (no <code>.example</code>).</p>
+      <p class="caption">This exact filename is what <code>.gitignore</code> excludes and what <code>Deploy-IntuneBaseline.ps1</code> expects by default — it's meant to hold real tenant-specific values, never committed as-is.</p>
+    </div>
+
+    <div class="step lane-file">
+      <span class="lane-tag">File</span>
+      <h3>5.2 &nbsp;Fill in the required values</h3>
+      <p>Open <code>customer.config.psd1</code> and replace every placeholder:</p>
+      <pre class="code-block"><code>@{
+    EntraTenantId              = "&lt;this customer's Entra tenant ID&gt;"
+    EdgeApprovedExtensionIds   = @("&lt;extension-id-1&gt;", "&lt;extension-id-2&gt;")
+    ChromeApprovedExtensionIds = @("&lt;extension-id-1&gt;")
+
+    <span class="dim"># Optional — see the .example file's comments for each</span>
+    MacOSOnboardingXmlPath     = "&lt;path, if deploying category 16&gt;"
+    FeatureUpdatePeriodDays    = 14
+    AsrPsExecWmiExclusions     = @()
+}</code></pre>
+      <p>Save it — <code>Ctrl+S</code>.</p>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; Decide macOS scope now — not mid-deploy</div>
+        <p>Category 16 (macOS) is in scope by default in phase 07 unless you explicitly skip it, and one of its 10 profiles needs <code>WindowsDefenderATPOnboarding.xml</code> — a file that's unique to this tenant and has to be downloaded fresh, never reused or pre-built. Pick one now, this is a known, expected fork in the road, not something gone wrong:</p>
+        <ul>
+          <li><strong>Skip macOS for this run</strong> — leave <code>MacOSOnboardingXmlPath</code> as <code>$null</code>, and plan to add <code>-SkipCategories '16_Defender_for_Endpoint_macOS'</code> to every <code>Deploy-IntuneBaseline.ps1</code> call in phase 07 until you're ready to come back to it.</li>
+          <li><strong>Include macOS now</strong> — go get the file (<strong>security.microsoft.com &rarr; Settings &rarr; Endpoints &rarr; Device management &rarr; Onboarding &rarr; macOS &rarr; Intune</strong>), save it somewhere in this project folder, and set <code>MacOSOnboardingXmlPath</code> to that real path before moving on.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>5.3 &nbsp;Validate it before you deploy anything</h3>
+      <pre class="code-block"><code>cd ..\config
+. .\Test-CustomerConfig.ps1
+Test-CustomerConfig -ConfigPath .\customer.config.psd1</code></pre>
+      <p><code>Deploy-IntuneBaseline.ps1</code> calls this internally too — but running it here, now, catches a placeholder value before you're deep into phase 07.</p>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body"><span class="warn2">EXCEPTION:</span> EdgeApprovedExtensionIds is still the placeholder value from
+customer.config.psd1.example. Deploying as-is ships an effectively empty
+extension allow list — see Production Note #21: this can silently block
+every browser extension the customer's users currently rely on.
+Fill in real approved extension IDs before deploying category 11.</div>
+      </div>
+      <p class="caption">Illustrative — the real script names the exact production note for whichever value is still a placeholder, so the fix is never a guess.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 6 : DEPLOY GROUPS ============ -->
+  <section id="deploy-groups">
+    <div class="section-head"><span class="section-num">06</span><h2 class="section-title">Deploy the groups (Terraform)</h2></div>
+    <p class="section-sub">Three commands, in this order — the same discipline as the CA baseline, just six always-present resources instead of fifty-eight (plus up to three more, once you promote a platform to production in phase 09). <code>plan</code> is the one to slow down and actually read.</p>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>6.1 &nbsp;Initialize</h3>
+      <p>Same terminal tab as phase 04 — it still holds the <code>$env:ARM_*</code> values:</p>
+      <pre class="code-block"><code>cd ..\terraform
+terraform init</code></pre>
+      <p class="caption"><code>pwd</code> should end in <code>Intune-Baseline-Deploy\terraform</code> before you run <code>init</code>. Downloads the <code>azuread</code> provider plugin — one-time per project copy.</p>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>6.2 &nbsp;Plan — read this before going further</h3>
+      <pre class="code-block"><code>terraform plan</code></pre>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Terraform will perform the following actions:
+
+  <span class="ok">+</span> azuread_group.target_windows_workstations
+  <span class="ok">+</span> azuread_group.target_windows_servers
+  <span class="ok">+</span> azuread_group.target_macos
+  <span class="ok">+</span> azuread_group.target_linux
+  <span class="ok">+</span> azuread_group.pilot_ring
+  <span class="ok">+</span> azuread_group.exclusion_break_glass
+
+<span class="accent">Plan: 6 to add, 0 to change, 0 to destroy.</span></div>
+      </div>
+      <p class="caption">Illustrative. Nothing has been created yet — <code>plan</code> never touches your tenant.</p>
+      <div class="callout danger">
+        <div class="callout-head">&#9888; If this errors instead of showing a plan</div>
+        <p>This exact file has not yet been run against a live tenant — an unexpected provider error on a genuine first run is possible, not a sign you did something wrong. Copy the <strong>entire</strong> red error block and send it over rather than guessing further.</p>
+      </div>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>6.3 &nbsp;Apply</h3>
+      <pre class="code-block"><code>terraform apply</code></pre>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Do you want to perform these actions?
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: <span class="accent">yes</span>
+
+<span class="ok">Apply complete! Resources: 9 added, 0 changed, 0 destroyed.</span></div>
+      </div>
+      <p>Type <code>yes</code>. Check <strong>Entra admin center &rarr; Groups</strong> — the 9 groups should be sitting there. Four pilot rings (<code>Intune-Pilot-WindowsWorkstations</code>, <code>-WindowsServers</code>, <code>-macOS</code>, <code>-Linux</code>), four static target groups (<code>Intune-Target-WindowsWorkstations</code>, <code>-WindowsServers</code>, <code>-macOS</code>, <code>-Linux</code>), and <code>Intune-Excl-BreakGlass</code>.</p>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; All 9 groups are static/manual by design — none of them auto-populate yet</div>
+        <p>Every group Terraform just created is manually-membered, on purpose (see <code>terraform/groups.tf</code>'s own comments): Arc-enrolled servers don't reliably populate the same device attributes across every customer environment, and pilot/target/break-glass membership should always be a deliberate human decision until a platform has proven itself. Add pilot devices to the <code>Intune-Pilot-&lt;Platform&gt;</code> ring that matches each device once policies start deploying in phase 07 — the auto-populated "-Dynamic" tier for each platform doesn't exist until you deliberately promote it in phase 09, after a soak period with no policy-related issues.</p>
+      </div>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>6.4 &nbsp;Note the group object IDs</h3>
+      <pre class="code-block"><code>terraform output assignment_group_ids</code></pre>
+      <p>The deploy script in phase 07 can resolve these by display name on its own — but having them printed here is a quick way to confirm the deploy script matches what Terraform actually built. The <code>*_dynamic</code> keys will show <code>null</code> until phase 09.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 7 : DEPLOY POLICIES ============ -->
+  <section id="deploy-policies">
+    <div class="section-head"><span class="section-num">07</span><h2 class="section-title">Deploy the policies (Graph SDK)</h2></div>
+    <p class="section-sub">One script, 222 policies, five different Graph object shapes — idempotent by name, so re-running it is always safe. This is also this project's first live-tenant run, project-wide, so read the unverified-assumptions tracker below before you start.</p>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>7.1 &nbsp;Connect</h3>
+      <p>Paste the <code>$cert</code> / <code>Connect-MgGraph</code> block you saved in step 4.4:</p>
+      <pre class="code-block"><code>cd ..\deploy
+$cert = ConvertTo-SecureString '&lt;secret&gt;' -AsPlainText -Force
+Connect-MgGraph -TenantId '&lt;tenant&gt;' -ClientSecretCredential (New-Object System.Management.Automation.PSCredential('&lt;app-id&gt;', $cert))</code></pre>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>7.2 &nbsp;Dry-run the whole pack offline first</h3>
+      <p>Before touching the tenant, replay all 212 policies through the deploy script against a <em>mocked</em> Graph API. No tenant, no credentials, no side effects — about a minute:</p>
+      <pre class="code-block"><code>pwsh ..\test\Invoke-OfflineReplay.ps1</code></pre>
+      <p>It asserts on every request the script would send: all three rollout stages in both create <em>and</em> update mode, every assignment carrying its tier group and the break-glass exclusion, customer-specific values actually reaching the wire, no leftover placeholders, no over-length descriptions, and the documented Graph endpoints and body parameter names being the ones actually used. Expect <code>All offline replay assertions passed.</code></p>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; Why this step exists — and why an idempotent script needs it twice</div>
+        <p>This pack's first live engagement hit seven separate deploy failures, each discovered one run at a time, hours apart. Every one was findable offline. They shared one shape: <strong>a code path that had never executed, failing the first time it did.</strong> An idempotent create-or-update script has two paths per object shape, and the update path doesn't run until the <em>second</em> deploy against a tenant — so a first clean run only ever proves half the code. The replay runs both. Run it after any change to the deploy script, the source pack, or the generated <code>Intune-Baseline/</code> output. See <code>RECONCILIATION.md</code> &sect;18 and &sect;22.</p>
+      </div>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>7.3 &nbsp;Pick a rollout stage — defaults to the safest one</h3>
+      <p><code>-RolloutStage</code> controls how broadly each policy applies, independent of which policies you deploy. It defaults to <code>Pilot</code>, so a first run never reaches a broad group by accident:</p>
+      <table class="stage-table">
+        <tr><th>Stage</th><th>Assigns to</th><th>Membership</th></tr>
+        <tr><td><code>Pilot</code> <span class="dim">(default)</span></td><td><code>Intune-Pilot-&lt;Platform&gt;</code></td><td>Manual — a small, deliberately-chosen device set, one ring per platform</td></tr>
+        <tr><td><code>Static</code></td><td><code>Intune-Target-&lt;Platform&gt;</code></td><td>Manual — expand over an agreed soak period</td></tr>
+        <tr><td><code>Dynamic</code></td><td><code>Intune-Target-&lt;Platform&gt;-Dynamic</code></td><td>Auto-populated by OS type — production. Only exists after phase 09.</td></tr>
+      </table>
+      <p class="caption">Every stage resolves the policy's platform the same way and applies a tier affix, so a platform moves Pilot &rarr; Static &rarr; Dynamic on its own timeline. <code>Intune-Excl-BreakGlass</code> is added as an exclusion on <strong>every</strong> assignment, at every stage — break-glass devices are protected regardless of where a policy currently sits. It is deliberately <strong>one</strong> group rather than four: break-glass is used mid-incident, and a single group has the property that matters under pressure — a device in it is excluded, full stop.</p>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>7.4 &nbsp;Run the deploy — everything, or a subset</h3>
+      <pre class="code-block"><code><span class="dim"># everything, Pilot stage (the default) — audit-mode-first policies deployed safely too</span>
+.\Deploy-IntuneBaseline.ps1 -CustomerConfigPath ..\config\customer.config.psd1
+
+<span class="dim"># if you chose "skip macOS for now" back in phase 05 — required unless MacOSOnboardingXmlPath is set</span>
+.\Deploy-IntuneBaseline.ps1 -CustomerConfigPath ..\config\customer.config.psd1 `
+    -SkipCategories '16_Defender_for_Endpoint_macOS'
+
+<span class="dim"># or scope to specific categories while you're validating</span>
+.\Deploy-IntuneBaseline.ps1 -CustomerConfigPath ..\config\customer.config.psd1 `
+    -Categories "01_Defender_for_Endpoint (Windows + Linux)"
+
+<span class="dim"># drop a single policy whose customer value isn't available yet, keeping the rest of its category</span>
+.\Deploy-IntuneBaseline.ps1 -CustomerConfigPath ..\config\customer.config.psd1 `
+    -SkipPolicyIds '13-Google-Chrome-CIS-Benchmark/Baseline-Chrome-Enable-Site-Isolation-for-specified-origins'</code></pre>
+      <p><code>-AuditModeForFlaggedPolicies</code> defaults to <code>$true</code> — the 3 policies flagged <code>audit_first_recommended</code> in <code>manifest.json</code> (Controlled Folder Access &times;2, the constructed webshell ASR rule) deploy in audit mode rather than their source-recorded block mode. Read Production Notes #17/#29/#30 in <code>RECONCILIATION.md</code> before passing <code>-AuditModeForFlaggedPolicies:$false</code>.</p>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Rollout stage: Pilot
+  -&gt; assigning via category -&gt; platform map, Pilot tier. Intune-Excl-BreakGlass is excluded on every assignment.
+== 01_Defender_for_Endpoint (Windows + Linux) — 33 policies ==
+  <span class="ok">[CREATED]</span>  ASR - BLOCK - Block Office applications from creating executable content
+  <span class="gaccent">-&gt; PilotWindowsWorkstations</span>
+  <span class="ok">[CREATED]</span>  Baseline - Microsoft Defender Antivirus
+  <span class="gaccent">-&gt; PilotWindowsWorkstations</span>
+  <span class="dim">&hellip; 31 more &hellip;</span>
+== 05_Tenant_and_Account_Access_Control — 3 policies ==
+  <span class="ok">[CREATED]</span>  Baseline - Block add MSA accounts and non-MSA accounts
+  <span class="ok">[CREATED]</span>  Baseline - One Drive management settings <span class="dim">(customer value injected)</span>
+  <span class="dim">&hellip;</span>
+== 16_Defender_for_Endpoint_macOS — 10 profiles, deploy_order respected ==
+  <span class="ok">[CREATED]</span>  sysext
+  <span class="ok">[CREATED]</span>  netfilter
+  <span class="dim">&hellip; 8 more, in manifest order &hellip;</span>
+
+<span class="accent">222 policies processed. 222 created, 0 updated, 0 failed.</span></div>
+      </div>
+      <p class="caption">Illustrative — this is what a clean run should look like. Since this script has not yet run against a live tenant, treat any deviation as genuinely new information worth sending over, not a sign you misread the guide.</p>
+    </div>
+
+    <div class="unverified-grid">
+      <div class="unv-row">
+        <span class="u-mark">&#9888;</span>
+        <div>
+          <strong>Endpoint Security intents (Account Protection, BitLocker)</strong> — <code>createInstance</code> then <code>updateSettings</code>
+          <div class="detail">Only 2 of 222 policies use this shape. Both paths are now confirmed working against a live tenant (2026-09-08), but they were the source of two separate bugs first: creation had to move to <code>POST /deviceManagement/templates/{templateId}/createInstance</code> (a plain <code>POST /intents</code> is not a create path), and the two actions take the same data under <em>different</em> parameter names — <code>settingsDelta</code> for createInstance, <code>settings</code> for updateSettings. Both are now asserted by the offline replay in step 7.2.</div>
+        </div>
+      </div>
+      <div class="unv-row">
+        <span class="u-mark">&#9888;</span>
+        <div>
+          <strong>Edge extension-settings JSON patch</strong> — category 11, CIS L2
+          <div class="detail">The <code>ExtensionSettings</code> JSON map the script builds from <code>EdgeApprovedExtensionIds</code> is inferred from Microsoft's general Edge policy documentation, not observed directly in the source file (its recorded value is a bare wildcard). Confirm the patched value actually renders correctly in the Intune portal or on a test device before trusting it for a real customer.</div>
+        </div>
+      </div>
+      <div class="unv-row">
+        <span class="u-mark">&#9888;</span>
+        <div>
+          <strong>ASR audit-mode substitution</strong> — the 3 <code>audit_first_recommended</code> policies
+          <div class="detail">A targeted regex swap on the ASR action enum (block&rarr;audit), flagged in the script's own comments as an unverified assumption about how that enum is encoded. Confirm each of the 3 flagged policies actually shows as "Audit," not "Block" or "Not configured," in the portal after this run.</div>
+        </div>
+      </div>
+      <div class="unv-row">
+        <span class="u-mark">&#9888;</span>
+        <div>
+          <strong>Break-glass exclusion</strong> — a mixed include+exclude <code>assignments</code> body, every policy
+          <div class="detail">Every <code>/assign</code> call now sends the tier's inclusion group alongside <code>Intune-Excl-BreakGlass</code> as an <code>exclusionGroupAssignmentTarget</code> in the same request. This is Microsoft's documented pattern, but it hasn't been exercised end-to-end against a live tenant for all 5 object shapes here. Spot-check a couple of policies in the portal to confirm the exclusion actually shows up.</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout warn">
+      <div class="callout-head">&#9888; If a policy fails partway through</div>
+      <p>The script is idempotent by name — re-running <code>.\Deploy-IntuneBaseline.ps1</code> with the same arguments skips everything already created and retries only what's missing or failed. Note which category and policy name it stopped at before re-running.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 8 : VERIFY ============ -->
+  <section id="verify">
+    <div class="section-head"><span class="section-num">08</span><h2 class="section-title">Verify what got deployed</h2></div>
+    <p class="section-sub">This reads the tenant directly and diffs it against <code>manifest.json</code> — the same file the deploy script deploys from, generated independently by <code>build_baseline.py</code> from the source pack, not from anything the deploy script itself produces. A bug in <code>Deploy-IntuneBaseline.ps1</code> shows up here as MISSING, not invisible to its own check. It also resolves each matched policy's live assignments to group names, so you can see which rollout tier it's actually sitting at.</p>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>8.1 &nbsp;Run the verification script</h3>
+      <pre class="code-block"><code>cd ..\verify
+.\Verify-Deployment.ps1 -CsvPath ".\verification-$(Get-Date -Format yyyy-MM-dd).csv"</code></pre>
+      <p>Signs in interactively (delegated), not with the app-only credential the deploy script uses — this human-run spot-check doesn't add a second standing credential to remember to clean up.</p>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Verifying tenant: &lt;tenant-id&gt;
+
+  <span class="ok">MATCH</span>    ASR - BLOCK - Block Office applications from creating executable content
+           -&gt; Intune-Pilot-WindowsWorkstations (break-glass excluded: Yes)
+  <span class="ok">MATCH</span>    Baseline - Microsoft Defender Antivirus
+           -&gt; Intune-Pilot-WindowsWorkstations (break-glass excluded: Yes)
+  <span class="ok">MATCH</span>    Baseline - One Drive management settings
+           -&gt; Intune-Pilot-WindowsWorkstations (break-glass excluded: Yes)
+           exists — verify injected customer value manually
+  <span class="dim">&hellip; 218 more &hellip;</span>
+
+Policies in the tenant NOT recognized as part of this baseline:
+  <span class="dim">(none)</span>
+
+222 checked, 0 missing, 0 created-but-unassigned, 0 missing the break-glass exclusion.</div>
+      </div>
+      <p class="caption">Illustrative output — yours will differ. Send the actual console output if anything shows MISSING, or a policy's assignment doesn't name the tier you expected.</p>
+    </div>
+
+    <div class="callout success">
+      <div class="callout-head">&#10003; What this does and doesn't prove</div>
+      <ul>
+        <li><strong>Does:</strong> confirms every policy in the manifest exists in the tenant under the expected name, for the expected Graph shape, and shows which group(s) it's actually assigned to.</li>
+        <li><strong>Doesn't:</strong> confirm the 4 customer-value policies have the <em>correct</em> injected values, or that the 3 audit-mode policies actually show "Audit" rather than "Block" — those need a manual portal check, per the unverified-assumptions tracker in phase 07.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 9 : PROMOTE ============ -->
+  <section id="promote">
+    <div class="section-head"><span class="section-num">09</span><h2 class="section-title">Promote a platform to production</h2></div>
+    <p class="section-sub">Not all policies suit every business, and security doesn't get to automatically trump productivity — this is the deliberate, risk-based step where a platform earns its way from a hand-picked pilot into full auto-enforcement. Do this per platform, only once you're actually happy, never as a default.</p>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>9.1 &nbsp;Confirm the soak period, then flip the flag</h3>
+      <p>Recommended cadence: 3-4 weeks with no policy-related issues at <code>-RolloutStage Static</code>, with membership manually expanded over that time — not just left at the original pilot handful. Once you're happy, edit <code>terraform\terraform.tfvars</code> for the platform you're promoting:</p>
+      <pre class="code-block"><code><span class="dim"># terraform.tfvars</span>
+windows_workstations_dynamic = true</code></pre>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>9.2 &nbsp;Apply — this provisions a new group, not a converted one</h3>
+      <pre class="code-block"><code>terraform apply</code></pre>
+      <div class="term-mock">
+        <div class="chrome"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div>
+        <div class="body">Terraform will perform the following actions:
+
+  <span class="ok">+</span> azuread_group.target_windows_workstations_dynamic[0]
+
+<span class="accent">Plan: 1 to add, 0 to change, 0 to destroy.</span></div>
+      </div>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; Why this is a new group, deliberately</div>
+        <p>The <code>azuread_group</code> resource's <code>types</code> argument (what turns dynamic membership on) is <code>ForceNew</code> in the <code>hashicorp/azuread</code> provider — flipping it on the <em>existing</em> static group would make Terraform destroy and recreate it, silently orphaning every policy assignment that pointed at its old object ID. A second group with a new ID sidesteps that entirely; the static group stays behind as a harmless record of who was in the pilot/expansion set.</p>
+      </div>
+    </div>
+
+    <div class="step lane-graph">
+      <span class="lane-tag">Graph SDK</span>
+      <h3>9.3 &nbsp;Re-run the deploy at the Dynamic stage</h3>
+      <pre class="code-block"><code>cd ..\deploy
+.\Deploy-IntuneBaseline.ps1 -CustomerConfigPath ..\config\customer.config.psd1 `
+    -RolloutStage Dynamic -Categories "02_Windows_CIS_Benchmark_Hardening"</code></pre>
+      <p>Idempotent by name — this re-points each policy's <code>/assign</code> call at the new <code>-Dynamic</code> group instead of appending to it. Scope with <code>-Categories</code> per platform you're promoting; Windows Server has no Dynamic tier at all and stays on its static group with a warning if you try.</p>
+      <p>Finish with <code>verify\Verify-Deployment.ps1</code> again (phase 08) and confirm the promoted category's <code>AssignedTo</code> now names the <code>-Dynamic</code> group.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION 10 : CLEANUP ============ -->
+  <section id="cleanup">
+    <div class="section-head"><span class="section-num">10</span><h2 class="section-title">Leaving it clean</h2></div>
+
+    <div class="step lane-portal">
+      <span class="lane-tag">Intune / Entra Portal</span>
+      <h3>10.1 &nbsp;Delete the app registration</h3>
+      <p>This is the step that makes the <strong>no standing access</strong> principle at the top of this page real. Do this once you've validated the deployment — don't leave it for "later." Because both tools share this one app registration, deleting it revokes both Terraform's and the deploy script's access at once.</p>
+      <p><strong>Entra admin center &rarr; App registrations &rarr; All applications</strong>, find <code>Intune-Baseline-Deploy</code>, open it, and <strong>Delete</strong>.</p>
+      <div class="callout warn">
+        <div class="callout-head">&#9888; Verify the deletion — don't just trust the click</div>
+        <pre class="code-block"><code>Connect-MgGraph -Scopes "Application.Read.All" -NoWelcome
+Get-MgApplication -Filter "displayName eq 'Intune-Baseline-Deploy'"</code></pre>
+        <p>No output back means it's gone.</p>
+      </div>
+      <div class="callout success">
+        <div class="callout-head">&#10003; What stays behind, on purpose</div>
+        <p>The groups and 222 policies keep existing and keep enforcing — independent objects, not owned by the app registration. Deleting the app removes the credential that could reconfigure them, not the controls themselves.</p>
+      </div>
+    </div>
+
+    <div class="step lane-terraform">
+      <span class="lane-tag">Terraform</span>
+      <h3>10.2 &nbsp;Clean up local secrets and state</h3>
+      <p>The customer's <code>ARM_*</code> secret is already dead once 10.1 is confirmed — but delete <code>app-registration.env</code>, <code>config\customer.config.psd1</code> (the real one, not the <code>.example</code>), <code>terraform\terraform.tfvars</code>, and <code>terraform\.terraform\</code>/<code>*.tfstate*</code> from this customer's folder once your engagement file has whatever record it needs — including which platforms, if any, were promoted to the Dynamic tier and when, since that history lives only in <code>terraform.tfvars</code> and the archived state. A dead secret sitting in a folder is still a dead secret sitting in a folder.</p>
+      <p>Do not reuse this folder for the next customer — copy the template fresh into a new customer-named folder and start again from phase 02.</p>
+    </div>
+  </section>
+
+  <!-- ============ SECTION : WHEN SOMETHING BREAKS ============ -->
+  <section id="help">
+    <div class="section-head"><span class="section-num">&#9998;</span><h2 class="section-title">When something breaks</h2></div>
+    <p class="section-sub">This project has not yet been run against a live tenant — something not matching this guide exactly on this first run is expected, not a sign you did something wrong. Here's what's actually useful to send over, by situation:</p>
+
+    <div class="send-card">
+      <span class="n">01</span>
+      <p><strong>A red Terraform error</strong> (init, plan, or apply on <code>groups.tf</code>) — copy the <em>entire</em> red block, top to bottom.</p>
+    </div>
+    <div class="send-card">
+      <span class="n">02</span>
+      <p><strong>The deploy script errors partway through</strong> — which category and policy display name it had reached, and whether you passed <code>-Categories</code>/<code>-SkipCategories</code> or the default <code>-AuditModeForFlaggedPolicies</code>.</p>
+    </div>
+    <div class="send-card">
+      <span class="n">03</span>
+      <p><strong><code>Test-CustomerConfig</code> throws a validation error</strong> — the exact error text; it names the specific production note and field, so that's usually enough to fix on its own, but send it anyway so the pattern is on record.</p>
+    </div>
+    <div class="send-card">
+      <span class="n">04</span>
+      <p><strong>A portal screen looks different from what's shown here</strong> — a real screenshot beats a description; Microsoft moves menu items around more often than the underlying API changes.</p>
+    </div>
+    <div class="send-card">
+      <span class="n">05</span>
+      <p><strong>One of the 4 unverified-assumption areas from phase 07 looks off</strong> — which of the four, and exactly what you see in the portal versus what was expected.</p>
+    </div>
+  </section>
+
+  <footer class="close">
+    <p><strong>This is the project's first live-tenant run</strong>, both tracks. Once <code>terraform apply</code> and <code>Deploy-IntuneBaseline.ps1</code> both complete cleanly and <code>Verify-Deployment.ps1</code> shows 222/222 matched, the mechanics are proven — the four flagged unverified areas in phase 07 are the specific things worth a second, deliberate look in the portal before calling a demo tenant "done." For a real customer engagement, the same rule as phase 02 applies going forward: one folder per customer, promote each platform only after its own deliberate soak period (phase 09), and close out the app registration per phase 10 the moment the deployment is validated.</p>
+  </footer>
+
+</div>
